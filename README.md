@@ -12,4 +12,4 @@ Web connector for connorjerzak.com.
 - `/contact/`
 
 **Research bibliography**
-- Source: `assets/data/jerzak-research.bib`
+- Managed BibTeX: `https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt`
