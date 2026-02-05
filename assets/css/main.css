@@ -319,6 +319,8 @@ html[data-theme="dark"] .modeDark {
 }
 
 .iconBtn {
+  position: relative;
+  isolation: isolate;
   width: 42px;
   height: 42px;
   border-radius: 999px;
@@ -341,12 +343,112 @@ html[data-theme="dark"] .iconBtn:hover {
   background: rgba(3, 3, 3, 0.7);
 }
 
+.iconBtn__icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.9;
+}
+
+.iconBtn__icon * {
+  vector-effect: non-scaling-stroke;
+}
+
+.iconBtn[aria-label]::after {
+  content: attr(aria-label);
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+}
+
+@media (hover: hover) {
+  .iconBtn:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.iconBtn:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .iconBtn__dot {
-  width: 10px;
-  height: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 7px;
+  height: 7px;
   border-radius: 999px;
   background: currentColor;
-  opacity: 0.8;
+  opacity: 0.55;
+}
+
+/* Icon states */
+.iconBtn[data-sound-toggle] .iconBtn__wave,
+.iconBtn[data-sound-toggle] .iconBtn__wave2,
+.iconBtn[data-sound-toggle] .iconBtn__slash,
+.iconBtn[data-theme-toggle] .iconBtn__sun,
+.iconBtn[data-theme-toggle] .iconBtn__moon,
+.iconBtn[data-menu-toggle] .iconBtn__menu,
+.iconBtn[data-menu-toggle] .iconBtn__close {
+  transition: opacity var(--dur) var(--ease);
+}
+
+.iconBtn[data-sound-toggle] .iconBtn__slash {
+  opacity: 0;
+}
+
+.iconBtn[data-sound-toggle][data-sound="off"] .iconBtn__wave,
+.iconBtn[data-sound-toggle][data-sound="off"] .iconBtn__wave2 {
+  opacity: 0;
+}
+
+.iconBtn[data-sound-toggle][data-sound="off"] .iconBtn__slash {
+  opacity: 1;
+}
+
+.iconBtn[data-theme-toggle] .iconBtn__moon {
+  opacity: 0;
+}
+
+html[data-theme="dark"] .iconBtn[data-theme-toggle] .iconBtn__sun {
+  opacity: 0;
+}
+
+html[data-theme="dark"] .iconBtn[data-theme-toggle] .iconBtn__moon {
+  opacity: 1;
+}
+
+.iconBtn[data-menu-toggle] .iconBtn__close {
+  opacity: 0;
+}
+
+.iconBtn[data-menu-toggle][aria-expanded="true"] .iconBtn__menu {
+  opacity: 0;
+}
+
+.iconBtn[data-menu-toggle][aria-expanded="true"] .iconBtn__close {
+  opacity: 1;
 }
 
 /* State cues */

@@ -183,6 +183,11 @@ function setupMenu() {
 
   let lastActive = null;
 
+  const renderToggleLabel = (isOpen) => {
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  };
+
   const getFocusable = () =>
     Array.from(
       overlay.querySelectorAll(
@@ -211,7 +216,7 @@ function setupMenu() {
 
   const close = () => {
     overlay.classList.remove("is-open");
-    toggle.setAttribute("aria-expanded", "false");
+    renderToggleLabel(false);
     document.body.classList.remove("menu-open");
     overlay.removeEventListener("keydown", trapTab);
     if (lastActive && typeof lastActive.focus === "function") lastActive.focus();
@@ -220,11 +225,13 @@ function setupMenu() {
   const open = () => {
     lastActive = document.activeElement;
     overlay.classList.add("is-open");
-    toggle.setAttribute("aria-expanded", "true");
+    renderToggleLabel(true);
     document.body.classList.add("menu-open");
     overlay.addEventListener("keydown", trapTab);
     getFocusable()[0]?.focus?.();
   };
+
+  renderToggleLabel(overlay.classList.contains("is-open"));
 
   toggle.addEventListener("click", () => {
     if (overlay.classList.contains("is-open")) close();

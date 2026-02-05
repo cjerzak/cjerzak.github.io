@@ -90,19 +90,53 @@
           <span class="brand__sub">Research</span>
         </a>
 
-        <div class="headerActions">
-          <button class="iconBtn" type="button" data-sound-toggle aria-label="Enable sound">
-            <span class="iconBtn__dot" aria-hidden="true"></span>
-          </button>
-          <button class="iconBtn" type="button" data-theme-toggle aria-label="Switch theme">
-            <span class="iconBtn__dot" aria-hidden="true"></span>
-          </button>
-          <button class="iconBtn" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
-            <span class="iconBtn__dot" aria-hidden="true"></span>
-          </button>
-        </div>
-      </div>
-    </header>
+	        <div class="headerActions">
+	          <button class="iconBtn" type="button" data-sound-toggle data-sound="off" aria-label="Enable sound">
+	            <svg class="iconBtn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+	              <path d="M11 5L6 9H3v6h3l5 4V5z" />
+	              <path class="iconBtn__wave" d="M15.5 8.5a4.5 4.5 0 010 7" />
+	              <path class="iconBtn__wave2" d="M18 6a8 8 0 010 12" />
+	              <path class="iconBtn__slash" d="M4.5 4.5l15 15" />
+	            </svg>
+	            <span class="iconBtn__dot" aria-hidden="true"></span>
+	          </button>
+	          <button class="iconBtn" type="button" data-theme-toggle aria-label="Switch to dark theme">
+	            <svg class="iconBtn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+	              <g class="iconBtn__sun">
+	                <circle cx="12" cy="12" r="4" />
+	                <path d="M12 2.5v3" />
+	                <path d="M12 18.5v3" />
+	                <path d="M4.2 4.2l2.1 2.1" />
+	                <path d="M17.7 17.7l2.1 2.1" />
+	                <path d="M2.5 12h3" />
+	                <path d="M18.5 12h3" />
+	                <path d="M4.2 19.8l2.1-2.1" />
+	                <path d="M17.7 6.3l2.1-2.1" />
+	              </g>
+	              <path
+	                class="iconBtn__moon"
+	                d="M20.6 15.2A7.6 7.6 0 1 1 8.8 3.4a6 6 0 0 0 11.8 11.8z"
+	              />
+	            </svg>
+	            <span class="iconBtn__dot" aria-hidden="true"></span>
+	          </button>
+	          <button class="iconBtn" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+	            <svg class="iconBtn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+	              <g class="iconBtn__menu">
+	                <path d="M5 7h14" />
+	                <path d="M5 12h14" />
+	                <path d="M5 17h14" />
+	              </g>
+	              <g class="iconBtn__close">
+	                <path d="M7 7l10 10" />
+	                <path d="M17 7L7 17" />
+	              </g>
+	            </svg>
+	            <span class="iconBtn__dot" aria-hidden="true"></span>
+	          </button>
+	        </div>
+	      </div>
+	    </header>
 
     <div class="menuOverlay" data-menu role="dialog" aria-modal="true" aria-label="Site menu">
       <div class="container menuOverlay__inner">
