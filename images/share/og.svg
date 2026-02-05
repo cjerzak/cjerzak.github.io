@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Connor Jerzak — Research Connector">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Connor Jerzak — Research">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#ffffff" stop-opacity="0.7" />
@@ -64,7 +64,7 @@
       fill="#030303"
       opacity="0.62"
     >
-      A lightweight research connector site with direct backlinks to connorjerzak.com
+      Causal inference · AI · Earth observation · connorjerzak.com
     </text>
 
     <g transform="translate(96 392)">
