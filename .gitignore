@@ -38,4 +38,10 @@ inc/
 /local/
 /.carmel/
 # cpanfile.snapshot should generally be ignored for library code, otherwise included
-# cpanfile.snapshot 
+# cpanfile.snapshot
+
+# Claude Code
+CLAUDE.md
+
+# Temporary files
+/tmp/
