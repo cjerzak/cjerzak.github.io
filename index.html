@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Connor T. Jerzak — Research Connector</title>
+    <meta
+      name="description"
+      content="Immersive previews of research at the intersection of causal inference, Earth observation, and computational social science. Explore projects and publications, then continue on connorjerzak.com."
+    />
+    <meta name="author" content="Connor T. Jerzak" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://cjerzak.github.io/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Connor T. Jerzak" />
+    <meta property="og:title" content="Connor T. Jerzak — Research Connector" />
+    <meta
+      property="og:description"
+      content="Immersive previews of research projects, visuals, and publications — with direct paths to connorjerzak.com."
+    />
+    <meta property="og:url" content="https://cjerzak.github.io/" />
+    <meta property="og:image" content="https://cjerzak.github.io/images/share/og.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Connor T. Jerzak — Research Connector" />
+    <meta
+      name="twitter:description"
+      content="Immersive previews of research projects, visuals, and publications — with direct paths to connorjerzak.com."
+    />
+    <meta name="twitter:image" content="https://cjerzak.github.io/images/share/og.png" />
+
+    <meta name="theme-color" content="#e8e8e8" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+    <link rel="me" href="https://connorjerzak.com/" />
+
+    <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+    <link rel="preconnect" href="https://i.ytimg.com" />
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Connor T. Jerzak — Research Connector",
+        "url": "https://cjerzak.github.io/",
+        "publisher": {
+          "@type": "Person",
+          "name": "Connor T. Jerzak",
+          "url": "https://connorjerzak.com/"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skipLink" href="#main">Skip to content</a>
+
+    <!-- Intro Loader (sound gate) -->
+    <div class="intro" data-intro>
+      <div class="container intro__inner">
+        <div class="intro__vertical" aria-hidden="true">Click to enable sound</div>
+        <div class="intro__panel" role="dialog" aria-modal="true" aria-label="Enter experience">
+          <p class="intro__title">Enter an immersive research atlas.</p>
+          <p class="intro__desc">
+            This site is a fast, minimalist “connector” to ongoing work — designed to entice exploration and link out to
+            <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
+          </p>
+          <div class="intro__actions">
+            <button class="btn btn--primary" type="button" data-intro-sound>Enable sound + enter</button>
+            <button class="btn btn--ghost" type="button" data-intro-muted>Enter muted</button>
+          </div>
+          <div class="intro__hint">Tip: Press <kbd>b</kbd> then <kbd>g</kbd> for backstage.</div>
+        </div>
+      </div>
+    </div>
+
+    <header class="siteHeader">
+      <div class="container siteHeader__inner">
+        <a class="brand" href="/" aria-label="Home">
+          <span class="brand__mark" aria-hidden="true">CJ</span>
+          <span class="brand__name">Connor Jerzak</span>
+          <span class="brand__sub">Research connector</span>
+        </a>
+
+        <div class="headerActions">
+          <button class="iconBtn" type="button" data-sound-toggle aria-label="Enable sound">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+          <button class="iconBtn" type="button" data-theme-toggle aria-label="Switch theme">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+          <button class="iconBtn" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="menuOverlay" data-menu role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="container menuOverlay__inner">
+        <nav class="menuPanel" aria-label="Primary">
+          <a class="menuPanel__link" href="/">Home</a>
+          <a class="menuPanel__link" href="/projects/">Projects</a>
+          <a class="menuPanel__link" href="/the-studio/">The Studio</a>
+          <a class="menuPanel__link" href="/contact/">Contact</a>
+
+          <div class="menuPanel__meta">
+            Built to excite — then hand off to the full hub:
+            <div class="pillRow">
+              <a class="pill" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
+              <a class="pill" href="/assets/data/jerzak-research.bib">Download BibTeX</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero" aria-label="Hero">
+        <div class="hero__bg" aria-hidden="true">
+          <canvas id="garden" class="hero__canvas"></canvas>
+          <div class="hero__veil"></div>
+        </div>
+
+        <div class="container hero__content">
+          <div class="hero__meta kicker" data-reveal>
+            <span>Immersive research atlas</span>
+            <span class="hero__metaDot" aria-hidden="true"></span>
+            <span>Causal inference · AI · Earth observation</span>
+          </div>
+          <h1 class="headline headline--h1" data-reveal>
+            Measure the world.<br />
+            Infer causes.<br />
+            Build tools that last.
+          </h1>
+          <p class="lede" data-reveal>
+            A minimalist, premium-feel gateway to projects, visuals, and publications — with direct backlinks to the main
+            site.
+          </p>
+          <div class="btnRow" data-reveal>
+            <a class="btn btn--primary" href="/projects/">Explore projects</a>
+            <a class="btn" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">Visit connorjerzak.com</a>
+          </div>
+
+          <div class="tagRow" data-reveal aria-label="Topics">
+            <span class="tag">Causal ML</span>
+            <span class="tag">Remote sensing</span>
+            <span class="tag">Text-as-data</span>
+            <span class="tag">Experimental design</span>
+            <span class="tag">Open-source software</span>
+          </div>
+        </div>
+
+        <div class="hero__scrollHint" aria-hidden="true">Scroll</div>
+      </section>
+
+      <section class="section section--tight" aria-label="Research visuals">
+        <div class="container">
+          <div class="kicker" data-reveal>Visualization backbone</div>
+          <h2 class="headline headline--h2" data-reveal>Figures that pull you in.</h2>
+          <p class="lede" data-reveal>
+            A curated slice of recent visuals. Each tile links to a paper, project, or explainer (often on
+            <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>).
+          </p>
+
+          <div class="mosaic" aria-label="Gallery">
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <div class="liteEmbed" data-lite-yt="CW7HPNMVxTg" data-start="4" aria-label="Text-based AI systems video">
+                  <button class="liteEmbed__btn" type="button" aria-label="Play video">
+                    <span class="liteEmbed__play" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" role="img" aria-label="Play">
+                        <path d="M8 5v14l11-7z"></path>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </figure>
+            </div>
+
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <a
+                  href="https://connorjerzak.com/llms-distill/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="mosaicCard__link"
+                  aria-label="Text analysis visualization"
+                >
+                  <img
+                    src="https://connorjerzak.com/wp-content/uploads/2025/12/image_set3_1_light.webp"
+                    alt="Text analysis visualization"
+                    class="mosaicCard__img modeLight"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    src="https://connorjerzak.com/wp-content/uploads/2025/12/image_set3_1_dark.webp"
+                    alt="Text analysis visualization (dark mode)"
+                    class="mosaicCard__img modeDark"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            </div>
+
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <a
+                  href="https://osf.io/preprints/osf/ums8y"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="mosaicCard__link"
+                  aria-label="Institutional analysis visualization"
+                >
+                  <img
+                    src="https://globalleadershipproject.net/wp-content/uploads/2025/11/InstViz.webp"
+                    alt="Institutional Visualization network graph"
+                    class="mosaicCard__img modeLight"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    src="https://globalleadershipproject.net/wp-content/uploads/2025/11/InstViz_dark.webp"
+                    alt="Institutional Visualization network graph (dark mode)"
+                    class="mosaicCard__img modeDark"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            </div>
+
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <a
+                  href="https://globalleadershipproject.net/cleavage/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="mosaicCard__link"
+                  aria-label="Agent cleavage visualization"
+                >
+                  <img
+                    src="https://globalleadershipproject.net/wp-content/uploads/2025/11/AgentViz.webp"
+                    alt="Agent Cleavage Simulation"
+                    class="mosaicCard__img modeLight"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    src="https://globalleadershipproject.net/wp-content/uploads/2025/11/AgentViz_dark.webp"
+                    alt="Agent Cleavage Simulation (dark mode)"
+                    class="mosaicCard__img modeDark"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            </div>
+
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <a
+                  href="https://connorjerzak.com/gci-overview/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="mosaicCard__link"
+                  aria-label="Earth Observation workflow overview"
+                >
+                  <img
+                    src="https://connorjerzak.com/wp-content/uploads/2025/04/EO_WorkflowVizV9_1-scaled.png"
+                    alt="Earth Observation Workflow Diagram"
+                    class="mosaicCard__img modeLight"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    src="https://connorjerzak.com/wp-content/uploads/2025/04/EO_WorkflowVizV9_1_darkmode.png"
+                    alt="Earth Observation Workflow Diagram (dark mode)"
+                    class="mosaicCard__img modeDark"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+                <figcaption class="mosaicCard__cap">
+                  <a href="https://arxiv.org/abs/2406.02584" target="_blank" rel="noreferrer">Related paper</a>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <a
+                  href="https://arxiv.org/abs/2501.07642"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="mosaicCard__link"
+                  aria-label="Fast rerandomization performance"
+                >
+                  <img
+                    src="https://connorjerzak.com/wp-content/uploads/2026/01/CPU_v_GPU_FALSE_100_light.webp"
+                    alt="Rerandomization performance results (n = 100)"
+                    class="mosaicCard__img modeLight"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    src="https://connorjerzak.com/wp-content/uploads/2026/01/CPU_v_GPU_FALSE_100_dark.webp"
+                    alt="Rerandomization performance results (n = 100, dark mode)"
+                    class="mosaicCard__img modeDark"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            </div>
+
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <a
+                  href="https://arxiv.org/abs/2407.11674"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="mosaicCard__link"
+                  aria-label="Effect heterogeneity with image sequences"
+                >
+                  <img
+                    src="https://planetarycausalinference.org/wp-content/uploads/2024/11/Visual-Abstract-Figure-2-copy.webp"
+                    alt="Image Sequence Analysis visual abstract"
+                    class="mosaicCard__img modeLight"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    src="https://planetarycausalinference.org/wp-content/uploads/2025/11/Visual-Abstract-Figure-2-copy_dark.webp"
+                    alt="Image Sequence Analysis visual abstract (dark mode)"
+                    class="mosaicCard__img modeDark"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            </div>
+
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <a
+                  href="https://arxiv.org/abs/2508.01341"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="mosaicCard__link"
+                  aria-label="A One Map, Many Trials"
+                >
+                  <img
+                    src="https://aidevlab.org/wp-content/uploads/2025/11/f682ea9e-688c-4849-a9a1-105ac566abe7_web_optimized.webp"
+                    alt="A One Map, Many Trials paradigm"
+                    class="mosaicCard__img"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            </div>
+          </div>
+
+          <div class="btnRow" data-reveal>
+            <a class="btn btn--primary" href="/projects/">See the full projects index</a>
+            <a class="btn" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">More visuals on the main site</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Approach">
+        <div class="container">
+          <div class="kicker" data-reveal>Our approach</div>
+          <h2 class="headline headline--h2" data-reveal>Proof, not vibes — delivered beautifully.</h2>
+          <p class="lede" data-reveal>
+            Combining causal inference, machine learning, and domain knowledge to turn complex data into interpretable,
+            decision-ready evidence — with open tools and reproducible workflows.
+          </p>
+
+          <div class="grid grid--3" style="margin-top: 28px" aria-label="Approach pillars">
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">Causal design</h3>
+              <div class="pub__meta">Experimental design, rerandomization, robust inference.</div>
+            </div>
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">Measurement at scale</h3>
+              <div class="pub__meta">Earth observation + CV for outcomes that are hard to observe.</div>
+            </div>
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">Text & organizations</h3>
+              <div class="pub__meta">LLMs for measurement, linkage, and careful evaluation.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-label="Featured projects">
+        <div class="container">
+          <div class="kicker" data-reveal>Featured</div>
+          <h2 class="headline headline--h2" data-reveal>Projects worth a click.</h2>
+          <p class="lede" data-reveal>Each project page is short, visual, and packed with links to the full story.</p>
+
+          <div class="grid grid--2" style="margin-top: 28px">
+            <a class="projectCard" href="/projects/fastrerandomize/" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img modeLight"
+                  src="https://connorjerzak.com/wp-content/uploads/2026/01/CPU_v_GPU_FALSE_1000_light.webp"
+                  alt="Fast rerandomization performance figure"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="projectCard__img modeDark"
+                  src="https://connorjerzak.com/wp-content/uploads/2026/01/CPU_v_GPU_FALSE_1000_dark.webp"
+                  alt="Fast rerandomization performance figure (dark mode)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">FastRerandomize</h3>
+                <div class="projectCard__meta">Software · 2026</div>
+                <div class="projectCard__specs">GPU acceleration · Randomization tests · Experimental design</div>
+              </div>
+            </a>
+
+            <a class="projectCard" href="/projects/causalimages/" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img modeLight"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/04/EO_WorkflowVizV9_1-scaled.png"
+                  alt="CausalImages and EO workflow visualization"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="projectCard__img modeDark"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/04/EO_WorkflowVizV9_1_darkmode.png"
+                  alt="CausalImages and EO workflow visualization (dark mode)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">CausalImages</h3>
+                <div class="projectCard__meta">Open-source · 2023–</div>
+                <div class="projectCard__specs">R package · EO / biomedical images · Causal workflows</div>
+              </div>
+            </a>
+
+            <a class="projectCard" href="/projects/linking-organizations/" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img modeLight"
+                  src="https://globalleadershipproject.net/wp-content/uploads/2025/11/InstViz.webp"
+                  alt="Organization linkage visualization"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="projectCard__img modeDark"
+                  src="https://globalleadershipproject.net/wp-content/uploads/2025/11/InstViz_dark.webp"
+                  alt="Organization linkage visualization (dark mode)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">Linking half a billion records</h3>
+                <div class="projectCard__meta">Data linkage · 2025</div>
+                <div class="projectCard__specs">Organizations · Open collaboration · Validation at scale</div>
+              </div>
+            </a>
+
+            <a class="projectCard" href="/projects/llm-disentangle-text/" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img modeLight"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/12/image_set3_2_light.webp"
+                  alt="LLM disentangling text visualization"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="projectCard__img modeDark"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/12/image_set3_2_dark.webp"
+                  alt="LLM disentangling text visualization (dark mode)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">Disentangling text</h3>
+                <div class="projectCard__meta">NLP · 2024</div>
+                <div class="projectCard__specs">LLMs vs humans · Evaluation · Measurement</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="btnRow" data-reveal style="margin-top: 24px">
+            <a class="btn btn--primary" href="/projects/">All projects</a>
+            <a class="btn" href="/the-studio/">About this studio</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="siteFooter" aria-label="Footer">
+        <div class="container footerGrid">
+          <div>
+            <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Keep going.</p>
+            <p class="footerNote" data-reveal>
+              This GitHub Pages site is intentionally lightweight and link-forward. For the complete portfolio of work,
+              posts, and updates, head to
+              <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
+            </p>
+          </div>
+
+          <div class="footerLinks" data-reveal aria-label="Links">
+            <a href="/projects/">Projects</a>
+            <a href="/assets/data/jerzak-research.bib">Download bibliography (BibTeX)</a>
+            <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">Main site: connorjerzak.com</a>
+            <a href="/contact/">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js" defer></script>
+    <script type="module" src="/assets/js/main.js"></script>
+  </body>
+</html>
+

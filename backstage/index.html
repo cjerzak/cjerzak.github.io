@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Backstage — Connor T. Jerzak</title>
+    <meta name="description" content="Hidden backstage notes for the Immersive Garden-inspired connector site." />
+    <meta name="author" content="Connor T. Jerzak" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://cjerzak.github.io/backstage/" />
+
+    <meta name="theme-color" content="#e8e8e8" />
+
+    <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+
+  <body>
+    <a class="skipLink" href="#main">Skip to content</a>
+
+    <header class="siteHeader">
+      <div class="container siteHeader__inner">
+        <a class="brand" href="/" aria-label="Home">
+          <span class="brand__mark" aria-hidden="true">CJ</span>
+          <span class="brand__name">Backstage</span>
+          <span class="brand__sub">Hidden</span>
+        </a>
+
+        <div class="headerActions">
+          <button class="iconBtn" type="button" data-sound-toggle aria-label="Enable sound">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+          <button class="iconBtn" type="button" data-theme-toggle aria-label="Switch theme">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+          <button class="iconBtn" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="menuOverlay" data-menu role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="container menuOverlay__inner">
+        <nav class="menuPanel" aria-label="Primary">
+          <a class="menuPanel__link" href="/">Home</a>
+          <a class="menuPanel__link" href="/projects/">Projects</a>
+          <a class="menuPanel__link" href="/the-studio/">The Studio</a>
+          <a class="menuPanel__link" href="/contact/">Contact</a>
+          <div class="menuPanel__meta">
+            Full hub:
+            <div class="pillRow">
+              <a class="pill" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
+              <a class="pill" href="/assets/data/jerzak-research.bib">Download BibTeX</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero" aria-label="Backstage hero" style="min-height: 65svh">
+        <div class="hero__bg" aria-hidden="true">
+          <canvas id="garden" class="hero__canvas"></canvas>
+          <div class="hero__veil"></div>
+        </div>
+
+        <div class="container hero__content">
+          <div class="kicker" data-reveal>Backstage</div>
+          <h1 class="headline headline--h1" data-reveal>Notes behind the curtain.</h1>
+          <p class="lede" data-reveal>
+            This connector site is inspired by the interaction + minimal-luxury ethos of Immersive Garden — adapted for
+            research communication and SEO-friendly backlinks.
+          </p>
+          <div class="btnRow" data-reveal>
+            <a class="btn btn--primary" href="/projects/">Projects</a>
+            <a class="btn" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">Main hub</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-label="What’s inside">
+        <div class="container">
+          <div class="kicker" data-reveal>What’s inside</div>
+          <h2 class="headline headline--h2" data-reveal>Technical & design choices</h2>
+          <p class="lede" data-reveal>
+            The goal is “fast + immersive”: no build step required, smooth page fades, an optional ambient sound bed,
+            and a generative canvas backdrop.
+          </p>
+
+          <div class="grid grid--2" style="margin-top: 28px" aria-label="Backstage cards">
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">Intro loader</h3>
+              <div class="pub__meta">
+                A sound gate that respects browser autoplay policies and stores your preference locally.
+              </div>
+            </div>
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">Smooth motion, reduced-motion support</h3>
+              <div class="pub__meta">
+                Lenis smooth scroll is optional; reduced-motion disables transitions and continuous animation.
+              </div>
+            </div>
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">WebGL-inspired canvas</h3>
+              <div class="pub__meta">
+                A lightweight “garden” field drawn on canvas (no heavy assets) with pointer-reactive sway.
+              </div>
+            </div>
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">SEO basics</h3>
+              <div class="pub__meta">
+                Canonicals, Open Graph, sitemap, robots.txt, and consistent internal linking across routes.
+              </div>
+            </div>
+          </div>
+
+          <div class="btnRow" data-reveal style="margin-top: 24px">
+            <a class="btn btn--primary" href="/">Back home</a>
+            <a class="btn" href="/assets/data/jerzak-research.bib">Download BibTeX</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="siteFooter" aria-label="Footer">
+        <div class="container footerGrid">
+          <div>
+            <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Back to the surface.</p>
+            <p class="footerNote" data-reveal>
+              Press <kbd>b</kbd> then <kbd>g</kbd> on any page to return here.
+            </p>
+          </div>
+          <div class="footerLinks" data-reveal aria-label="Links">
+            <a href="/">Home</a>
+            <a href="/projects/">Projects</a>
+            <a href="/the-studio/">The Studio</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js" defer></script>
+    <script type="module" src="/assets/js/main.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Projects & Publications — Connor T. Jerzak</title>
+    <meta
+      name="description"
+      content="Immersive, visual entry points to research projects and publications — with direct links to connorjerzak.com and the original papers."
+    />
+    <meta name="author" content="Connor T. Jerzak" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://cjerzak.github.io/projects/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Connor T. Jerzak" />
+    <meta property="og:title" content="Projects & Publications — Connor T. Jerzak" />
+    <meta
+      property="og:description"
+      content="Projects, visuals, and a bibliography — built to excite and link out to the full hub."
+    />
+    <meta property="og:url" content="https://cjerzak.github.io/projects/" />
+    <meta property="og:image" content="https://cjerzak.github.io/images/share/og.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Projects & Publications — Connor T. Jerzak" />
+    <meta
+      name="twitter:description"
+      content="Projects, visuals, and a bibliography — built to excite and link out to the full hub."
+    />
+    <meta name="twitter:image" content="https://cjerzak.github.io/images/share/og.png" />
+
+    <meta name="theme-color" content="#e8e8e8" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+    <link rel="me" href="https://connorjerzak.com/" />
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+
+  <body>
+    <a class="skipLink" href="#main">Skip to content</a>
+
+    <div class="intro" data-intro>
+      <div class="container intro__inner">
+        <div class="intro__vertical" aria-hidden="true">Click to enable sound</div>
+        <div class="intro__panel" role="dialog" aria-modal="true" aria-label="Enter experience">
+          <p class="intro__title">Projects & publications.</p>
+          <p class="intro__desc">
+            Fast visual summaries with links out to the complete hub on
+            <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
+          </p>
+          <div class="intro__actions">
+            <button class="btn btn--primary" type="button" data-intro-sound>Enable sound + enter</button>
+            <button class="btn btn--ghost" type="button" data-intro-muted>Enter muted</button>
+          </div>
+          <div class="intro__hint">Tip: Press <kbd>b</kbd> then <kbd>g</kbd> for backstage.</div>
+        </div>
+      </div>
+    </div>
+
+    <header class="siteHeader">
+      <div class="container siteHeader__inner">
+        <a class="brand" href="/" aria-label="Home">
+          <span class="brand__mark" aria-hidden="true">CJ</span>
+          <span class="brand__name">Connor Jerzak</span>
+          <span class="brand__sub">Projects</span>
+        </a>
+
+        <div class="headerActions">
+          <button class="iconBtn" type="button" data-sound-toggle aria-label="Enable sound">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+          <button class="iconBtn" type="button" data-theme-toggle aria-label="Switch theme">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+          <button class="iconBtn" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="menuOverlay" data-menu role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="container menuOverlay__inner">
+        <nav class="menuPanel" aria-label="Primary">
+          <a class="menuPanel__link" href="/">Home</a>
+          <a class="menuPanel__link" href="/projects/">Projects</a>
+          <a class="menuPanel__link" href="/the-studio/">The Studio</a>
+          <a class="menuPanel__link" href="/contact/">Contact</a>
+          <div class="menuPanel__meta">
+            Full hub:
+            <div class="pillRow">
+              <a class="pill" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
+              <a class="pill" href="/assets/data/jerzak-research.bib">Download BibTeX</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero" aria-label="Projects hero" style="min-height: 70svh">
+        <div class="hero__bg" aria-hidden="true">
+          <canvas id="garden" class="hero__canvas"></canvas>
+          <div class="hero__veil"></div>
+        </div>
+
+        <div class="container hero__content">
+          <div class="kicker" data-reveal>Projects & publications</div>
+          <h1 class="headline headline--h1" data-reveal>Choose a thread.<br />Follow it outward.</h1>
+          <p class="lede" data-reveal>
+            Each card is a compact visual summary — with a path to the full explainer on
+            <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a> and the original
+            paper.
+          </p>
+          <div class="btnRow" data-reveal>
+            <a class="btn btn--primary" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">Main hub</a>
+            <a class="btn" href="#bibliography">Jump to bibliography</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-label="Projects list">
+        <div class="container">
+          <div class="kicker" data-reveal>Index</div>
+          <h2 class="headline headline--h2" data-reveal>Featured entry points</h2>
+
+          <div class="grid grid--2" style="margin-top: 28px">
+            <a class="projectCard" href="/projects/fastrerandomize/" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img modeLight"
+                  src="https://connorjerzak.com/wp-content/uploads/2026/01/CPU_v_GPU_FALSE_1000_light.webp"
+                  alt="FastRerandomize performance figure"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="projectCard__img modeDark"
+                  src="https://connorjerzak.com/wp-content/uploads/2026/01/CPU_v_GPU_FALSE_1000_dark.webp"
+                  alt="FastRerandomize performance figure (dark mode)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">FastRerandomize</h3>
+                <div class="projectCard__meta">SoftwareX · 2026</div>
+                <div class="projectCard__specs">GPU acceleration · Rerandomization · Randomization tests</div>
+              </div>
+            </a>
+
+            <a class="projectCard" href="/projects/one-map-many-trials/" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img"
+                  src="https://aidevlab.org/wp-content/uploads/2025/11/f682ea9e-688c-4849-a9a1-105ac566abe7_web_optimized.webp"
+                  alt="One Map, Many Trials visual"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">One Map, Many Trials</h3>
+                <div class="projectCard__meta">AAAI-26 · 2026</div>
+                <div class="projectCard__specs">Debiasing · Remote sensing · Causal inference</div>
+              </div>
+            </a>
+
+            <a class="projectCard" href="/projects/causalimages/" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img modeLight"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/04/EO_WorkflowVizV9_1-scaled.png"
+                  alt="CausalImages workflow visualization"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="projectCard__img modeDark"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/04/EO_WorkflowVizV9_1_darkmode.png"
+                  alt="CausalImages workflow visualization (dark mode)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">CausalImages</h3>
+                <div class="projectCard__meta">Open-source · 2023</div>
+                <div class="projectCard__specs">R package · EO + biomedical images · Reproducible pipelines</div>
+              </div>
+            </a>
+
+            <a class="projectCard" href="/projects/linking-organizations/" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img modeLight"
+                  src="https://globalleadershipproject.net/wp-content/uploads/2025/11/InstViz.webp"
+                  alt="Institutional network visualization"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="projectCard__img modeDark"
+                  src="https://globalleadershipproject.net/wp-content/uploads/2025/11/InstViz_dark.webp"
+                  alt="Institutional network visualization (dark mode)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">Linking datasets on organizations</h3>
+                <div class="projectCard__meta">PSRM · 2025</div>
+                <div class="projectCard__specs">Half a billion records · Open collaboration · Linkage validation</div>
+              </div>
+            </a>
+
+            <a class="projectCard" href="/projects/llm-disentangle-text/" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img modeLight"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/12/image_set3_4_light.webp"
+                  alt="LLM disentangling text visualization"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="projectCard__img modeDark"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/12/image_set3_4_dark.webp"
+                  alt="LLM disentangling text visualization (dark mode)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">Can LLMs disentangle text?</h3>
+                <div class="projectCard__meta">NLP+CSS · 2024</div>
+                <div class="projectCard__specs">Measurement · Evaluation · Human comparisons</div>
+              </div>
+            </a>
+
+            <a class="projectCard" href="/projects/ezpass/" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img modeLight"
+                  src="https://i0.wp.com/connorjerzak.com/wp-content/uploads/2025/12/politics-of-ezpass-summary-1_light.webp"
+                  alt="E‑ZPass research summary figure"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="projectCard__img modeDark"
+                  src="https://i0.wp.com/connorjerzak.com/wp-content/uploads/2025/12/politics-of-ezpass-summary-1_dark.webp"
+                  alt="E‑ZPass research summary figure (dark mode)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">Politics of E‑ZPass</h3>
+                <div class="projectCard__meta">Transportation economics · 2020</div>
+                <div class="projectCard__specs">Infrastructure · Elections · Policy feedback</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="More visuals">
+        <div class="container">
+          <div class="kicker" data-reveal>More visuals</div>
+          <h2 class="headline headline--h2" data-reveal>Atlas tiles</h2>
+          <p class="lede" data-reveal>
+            A larger mosaic of figures and talks. Many tiles intentionally backlink to deeper explainers on
+            <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
+          </p>
+
+          <div class="mosaic" aria-label="Full gallery">
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <a href="https://planetarycausalinference.org/" target="_blank" rel="noreferrer" class="mosaicCard__link">
+                  <img
+                    src="https://planetarycausalinference.org/wp-content/uploads/2025/04/PCI_im.jpg"
+                    alt="Planetary Causal Inference"
+                    class="mosaicCard__img modeLight"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    src="https://planetarycausalinference.org/wp-content/uploads/2025/04/pci_dark_mode.png"
+                    alt="Planetary Causal Inference (dark mode)"
+                    class="mosaicCard__img modeDark"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            </div>
+
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <a href="https://arxiv.org/abs/2406.02584" target="_blank" rel="noreferrer" class="mosaicCard__link">
+                  <img
+                    src="https://planetarycausalinference.org/wp-content/uploads/2024/11/Screenshot-2024-11-21-at-10.14.32%E2%80%AFAM.png"
+                    alt="PCI screenshot"
+                    class="mosaicCard__img"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            </div>
+
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <a href="https://aclanthology.org/2024.nlpcss-1.5.pdf" target="_blank" rel="noreferrer" class="mosaicCard__link">
+                  <img
+                    src="https://connorjerzak.com/wp-content/uploads/2025/11/im4.webp"
+                    alt="NLP analysis visualization"
+                    class="mosaicCard__img modeLight"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    src="https://connorjerzak.com/wp-content/uploads/2025/11/im3.webp"
+                    alt="NLP analysis visualization (dark mode)"
+                    class="mosaicCard__img modeDark"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            </div>
+
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0739885919303361" target="_blank" rel="noreferrer" class="mosaicCard__link">
+                  <img
+                    src="https://i0.wp.com/connorjerzak.com/wp-content/uploads/2025/12/politics-of-ezpass-summary-2_light.webp"
+                    alt="Politics of E‑ZPass summary visualization"
+                    class="mosaicCard__img modeLight"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    src="https://i0.wp.com/connorjerzak.com/wp-content/uploads/2025/12/politics-of-ezpass-summary-2_dark.webp"
+                    alt="Politics of E‑ZPass summary visualization (dark mode)"
+                    class="mosaicCard__img modeDark"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            </div>
+
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <a href="https://arxiv.org/pdf/2301.12985.pdf" target="_blank" rel="noreferrer" class="mosaicCard__link">
+                  <img
+                    src="https://i0.wp.com/connorjerzak.com/wp-content/uploads/2025/12/platonic1_light.webp"
+                    alt="Platonic representations figure"
+                    class="mosaicCard__img modeLight"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    src="https://i0.wp.com/connorjerzak.com/wp-content/uploads/2025/12/platonic1_dark.webp"
+                    alt="Platonic representations figure (dark mode)"
+                    class="mosaicCard__img modeDark"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            </div>
+
+            <div class="mosaic__item" data-reveal>
+              <figure class="mosaicCard">
+                <div class="liteEmbed" data-lite-yt="RvAoJGMlKAI" aria-label="Talk video">
+                  <button class="liteEmbed__btn" type="button" aria-label="Play video">
+                    <span class="liteEmbed__play" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" role="img" aria-label="Play">
+                        <path d="M8 5v14l11-7z"></path>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="bibliography" aria-label="Bibliography">
+        <div class="container">
+          <div class="kicker" data-reveal>Bibliography</div>
+          <h2 class="headline headline--h2" data-reveal>Selected publications</h2>
+          <p class="lede" data-reveal>
+            A concise list with links. Download the complete BibTeX:
+            <a href="/assets/data/jerzak-research.bib">jerzak-research.bib</a>.
+          </p>
+
+          <ol class="pubList" style="margin-top: 28px">
+            <li class="pub" data-reveal>
+              <h3 class="pub__title">FastRerandomize: Fast rerandomization using accelerated computing</h3>
+              <div class="pub__meta">Goldstein, Jerzak, Kamat, Zhu · SoftwareX · 2026</div>
+              <div class="pub__links">
+                <a href="https://doi.org/10.1016/j.softx.2026.102508" target="_blank" rel="noreferrer">DOI</a>
+                <a href="/projects/fastrerandomize/">Project page</a>
+              </div>
+            </li>
+            <li class="pub" data-reveal>
+              <h3 class="pub__title">
+                Linking datasets on organizations using half a billion open‑collaborated records
+              </h3>
+              <div class="pub__meta">Libgober, Jerzak · Political Science Research and Methods · 2025</div>
+              <div class="pub__links">
+                <a href="https://doi.org/10.1017/psrm.2024.55" target="_blank" rel="noreferrer">DOI</a>
+                <a href="/projects/linking-organizations/">Project page</a>
+              </div>
+            </li>
+            <li class="pub" data-reveal>
+              <h3 class="pub__title">
+                Can Large Language Models (or Humans) Disentangle Text?
+              </h3>
+              <div class="pub__meta">Pieuchon, Daoud, Jerzak, Johansson, Johansson · NLP+CSS · 2024</div>
+              <div class="pub__links">
+                <a href="https://aclanthology.org/2024.nlpcss-1.5.pdf" target="_blank" rel="noreferrer">PDF</a>
+                <a href="/projects/llm-disentangle-text/">Project page</a>
+              </div>
+            </li>
+            <li class="pub" data-reveal>
+              <h3 class="pub__title">The Composition of Descriptive Representation</h3>
+              <div class="pub__meta">Gerring, Jerzak, Öncel · American Political Science Review · 2024</div>
+              <div class="pub__links">
+                <a href="https://doi.org/10.1017/S0003055423000680" target="_blank" rel="noreferrer">DOI</a>
+              </div>
+            </li>
+            <li class="pub" data-reveal>
+              <h3 class="pub__title">
+                Image‑based Treatment Effect Heterogeneity
+              </h3>
+              <div class="pub__meta">Jerzak, Johansson, Daoud · CLeaR · 2023</div>
+              <div class="pub__links">
+                <a href="https://proceedings.mlr.press/v213/jerzak23a.html" target="_blank" rel="noreferrer">PMLR</a>
+              </div>
+            </li>
+          </ol>
+
+          <details class="pub" data-reveal style="margin-top: 18px">
+            <summary>Full bibliography (24 items)</summary>
+            <div class="pub__meta">
+              Prefer BibTeX? Download
+              <a href="/assets/data/jerzak-research.bib">jerzak-research.bib</a>.
+            </div>
+
+            <ol class="pubList" style="margin-top: 14px">
+              <li class="pub">
+                <h3 class="pub__title">
+                  Chinese vs. World Bank Development Projects: Insights from Earth Observation and Computer Vision on Wealth Gains in Africa, 2002–2013
+                </h3>
+                <div class="pub__meta">Daoud, Conlin, Jerzak · World Development · 2026 (to appear)</div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">
+                  FastRerandomize: Fast rerandomization using accelerated computing
+                </h3>
+                <div class="pub__meta">Goldstein, Jerzak, Kamat, Zhu · SoftwareX · 2026</div>
+                <div class="pub__links">
+                  <a href="https://doi.org/10.1016/j.softx.2026.102508" target="_blank" rel="noreferrer">DOI</a>
+                  <a href="/projects/fastrerandomize/">Project</a>
+                </div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">
+                  Debiasing Machine Learning Predictions for Causal Inference Without Additional Ground Truth Data: One Map, Many Trials in Satellite-Driven Poverty Analysis
+                </h3>
+                <div class="pub__meta">Pettersson, Jerzak, Daoud · AAAI-26 (AI for Social Impact) · 2026</div>
+                <div class="pub__links">
+                  <a href="https://arxiv.org/abs/2508.01341" target="_blank" rel="noreferrer">arXiv</a>
+                  <a href="/projects/one-map-many-trials/">Project</a>
+                </div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">
+                  Electoral Rules and Descriptive Representation: A Comprehensive View Across Multiple Identities
+                </h3>
+                <div class="pub__meta">Gerring, Hicken, Jerzak, Moser, Öncel · Cambridge University Press · 2026 (under contract)</div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">
+                  Benchmarking Debiasing Methods for LLM‑based Parameter Estimates
+                </h3>
+                <div class="pub__meta">de Pieuchon, Daoud, Jerzak, Johansson, Johansson · EMNLP · 2025</div>
+                <div class="pub__links">
+                  <a href="https://aclanthology.org/2025.emnlp-main.1000/" target="_blank" rel="noreferrer">ACL Anthology</a>
+                  <a href="https://doi.org/10.18653/v1/2025.emnlp-main.1000" target="_blank" rel="noreferrer">DOI</a>
+                </div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">
+                  Optimizing Multi‑Scale Representations to Detect Effect Heterogeneity Using Earth Observation and Computer Vision: Applications to Two Anti‑Poverty RCTs
+                </h3>
+                <div class="pub__meta">Zhu, Jerzak, Daoud · CLeaR (PMLR) · 2025</div>
+                <div class="pub__links">
+                  <a href="https://proceedings.mlr.press/v275/zhu25a.html" target="_blank" rel="noreferrer">PMLR</a>
+                </div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">Selecting Optimal Candidate Profiles in Adversarial Environments Using Conjoint Analysis and Machine Learning</h3>
+                <div class="pub__meta">Jerzak, Chandra, Hazra · arXiv · 2025</div>
+                <div class="pub__links">
+                  <a href="https://arxiv.org/abs/2504.19043" target="_blank" rel="noreferrer">arXiv</a>
+                </div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">Platonic Representations for Poverty Mapping: Unified Vision‑Language Codes or Agent‑Induced Novelty?</h3>
+                <div class="pub__meta">Murugaboopathy, Jerzak, Daoud · arXiv · 2025</div>
+                <div class="pub__links">
+                  <a href="https://arxiv.org/abs/2508.01109" target="_blank" rel="noreferrer">arXiv</a>
+                </div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">A Scoping Review of Earth Observation and Machine Learning for Causal Inference: Implications for the Geography of Poverty</h3>
+                <div class="pub__meta">Sakamoto, Jerzak, Daoud · In: Geography of Poverty · 2025</div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">Linking datasets on organizations using half a billion open‑collaborated records</h3>
+                <div class="pub__meta">Libgober, Jerzak · Political Science Research and Methods · 2025</div>
+                <div class="pub__links">
+                  <a href="https://doi.org/10.1017/psrm.2024.55" target="_blank" rel="noreferrer">DOI</a>
+                  <a href="/projects/linking-organizations/">Project</a>
+                  <a href="https://connorjerzak.com/linkorgs-summary/" target="_blank" rel="noreferrer">Explainer</a>
+                </div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">The Composition of Descriptive Representation</h3>
+                <div class="pub__meta">Gerring, Jerzak, Öncel · American Political Science Review · 2024</div>
+                <div class="pub__links">
+                  <a href="https://doi.org/10.1017/S0003055423000680" target="_blank" rel="noreferrer">DOI</a>
+                </div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">Effect Heterogeneity with Earth Observation in Randomized Controlled Trials: Exploring the Role of Data, Model, and Evaluation Metric Choice</h3>
+                <div class="pub__meta">Jerzak, Vashistha, Daoud · arXiv · 2024</div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">Can Large Language Models (or Humans) Disentangle Text?</h3>
+                <div class="pub__meta">Pieuchon, Daoud, Jerzak, Johansson, Johansson · NLP+CSS · 2024</div>
+                <div class="pub__links">
+                  <a href="https://aclanthology.org/2024.nlpcss-1.5.pdf" target="_blank" rel="noreferrer">PDF</a>
+                  <a href="/projects/llm-disentangle-text/">Project</a>
+                  <a href="https://connorjerzak.com/llms-distill/" target="_blank" rel="noreferrer">Explainer</a>
+                </div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">An Improved Method of Automated Nonparametric Content Analysis for Social Science</h3>
+                <div class="pub__meta">Jerzak, King, Strezhnev · Political Analysis · 2023</div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">CausalImages: An R Package for Causal Inference with Earth Observation, Bio‑medical, and Social Science Images</h3>
+                <div class="pub__meta">Jerzak, Daoud · arXiv preprint · 2023</div>
+                <div class="pub__links">
+                  <a href="/projects/causalimages/">Project</a>
+                </div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">Image‑based Treatment Effect Heterogeneity</h3>
+                <div class="pub__meta">Jerzak, Johansson, Daoud · CLeaR (PMLR) · 2023</div>
+                <div class="pub__links">
+                  <a href="https://proceedings.mlr.press/v213/jerzak23a.html" target="_blank" rel="noreferrer">PMLR</a>
+                </div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">Integrating Earth Observation Data into Causal Inference: Challenges and Opportunities</h3>
+                <div class="pub__meta">Jerzak, Johansson, Daoud · arXiv preprint · 2023</div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">Degrees of Randomness in Rerandomization Procedures</h3>
+                <div class="pub__meta">Jerzak, Goldstein · arXiv preprint · 2023</div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">Football fandom in Egypt</h3>
+                <div class="pub__meta">Jerzak · In: Routledge Handbook of Sport in the Middle East · 2022</div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">Conceptualizing Treatment Leakage in Text‑based Causal Inference</h3>
+                <div class="pub__meta">Daoud, Jerzak, Johansson · NAACL · 2022</div>
+                <div class="pub__links">
+                  <a href="https://doi.org/10.18653/v1/2022.naacl-main.413" target="_blank" rel="noreferrer">DOI</a>
+                </div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">Automated nonparametric content analysis for information management and retrieval</h3>
+                <div class="pub__meta">King, Jerzak, Strezhnev · U.S. Patent US11514233 · 2022</div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">The Impact of a Transportation Intervention on Electoral Politics: Evidence from E‑ZPass</h3>
+                <div class="pub__meta">Jerzak, Libgober · Research in Transportation Economics · 2020</div>
+                <div class="pub__links">
+                  <a href="/projects/ezpass/">Project</a>
+                  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0739885919303361" target="_blank" rel="noreferrer"
+                    >ScienceDirect</a
+                  >
+                </div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">The EU's Democratic Deficit and Repeated Referendums in Ireland</h3>
+                <div class="pub__meta">Jerzak · International Journal of Politics, Culture, and Society · 2014</div>
+              </li>
+
+              <li class="pub">
+                <h3 class="pub__title">Ultras in Egypt: State, Revolution, and the Power of Public Space</h3>
+                <div class="pub__meta">Jerzak · Interface · 2013</div>
+              </li>
+            </ol>
+          </details>
+        </div>
+      </section>
+
+      <footer class="siteFooter" aria-label="Footer">
+        <div class="container footerGrid">
+          <div>
+            <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Back to the hub.</p>
+            <p class="footerNote" data-reveal>
+              This site is a connector. For the complete archive, updates, and posts:
+              <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
+            </p>
+          </div>
+          <div class="footerLinks" data-reveal aria-label="Links">
+            <a href="/">Home</a>
+            <a href="/the-studio/">The Studio</a>
+            <a href="/assets/data/jerzak-research.bib">Download bibliography (BibTeX)</a>
+            <a href="/contact/">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js" defer></script>
+    <script type="module" src="/assets/js/main.js"></script>
+  </body>
+</html>

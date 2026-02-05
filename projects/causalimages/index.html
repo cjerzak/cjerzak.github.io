@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CausalImages — Connor T. Jerzak</title>
+    <meta
+      name="description"
+      content="CausalImages: an R package and workflow for causal inference with Earth observation, biomedical, and social science images."
+    />
+    <meta name="author" content="Connor T. Jerzak" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://cjerzak.github.io/projects/causalimages/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Connor T. Jerzak" />
+    <meta property="og:title" content="CausalImages" />
+    <meta
+      property="og:description"
+      content="Causal inference with images: an R package + workflow across Earth observation, biomedical, and social science settings."
+    />
+    <meta property="og:url" content="https://cjerzak.github.io/projects/causalimages/" />
+    <meta property="og:image" content="https://cjerzak.github.io/images/share/og.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CausalImages" />
+    <meta
+      name="twitter:description"
+      content="Causal inference with images: an R package + workflow across Earth observation, biomedical, and social science settings."
+    />
+    <meta name="twitter:image" content="https://cjerzak.github.io/images/share/og.png" />
+
+    <meta name="theme-color" content="#e8e8e8" />
+
+    <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+    <link rel="me" href="https://connorjerzak.com/" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+
+  <body>
+    <a class="skipLink" href="#main">Skip to content</a>
+
+    <div class="intro" data-intro>
+      <div class="container intro__inner">
+        <div class="intro__vertical" aria-hidden="true">Click to enable sound</div>
+        <div class="intro__panel" role="dialog" aria-modal="true" aria-label="Enter experience">
+          <p class="intro__title">CausalImages</p>
+          <p class="intro__desc">Causal inference with Earth observation, biomedical, and social science images.</p>
+          <div class="intro__actions">
+            <button class="btn btn--primary" type="button" data-intro-sound>Enable sound + enter</button>
+            <button class="btn btn--ghost" type="button" data-intro-muted>Enter muted</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="siteHeader">
+      <div class="container siteHeader__inner">
+        <a class="brand" href="/projects/" aria-label="Back to projects">
+          <span class="brand__mark" aria-hidden="true">CJ</span>
+          <span class="brand__name">Projects</span>
+          <span class="brand__sub">CausalImages</span>
+        </a>
+
+        <div class="headerActions">
+          <button class="iconBtn" type="button" data-sound-toggle aria-label="Enable sound">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+          <button class="iconBtn" type="button" data-theme-toggle aria-label="Switch theme">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+          <button class="iconBtn" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="menuOverlay" data-menu role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="container menuOverlay__inner">
+        <nav class="menuPanel" aria-label="Primary">
+          <a class="menuPanel__link" href="/">Home</a>
+          <a class="menuPanel__link" href="/projects/">Projects</a>
+          <a class="menuPanel__link" href="/the-studio/">The Studio</a>
+          <a class="menuPanel__link" href="/contact/">Contact</a>
+          <div class="menuPanel__meta">
+            Full hub:
+            <div class="pillRow">
+              <a class="pill" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
+              <a class="pill" href="/assets/data/jerzak-research.bib">Download BibTeX</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero" aria-label="Project hero" style="min-height: 70svh">
+        <div class="hero__bg" aria-hidden="true">
+          <canvas id="garden" class="hero__canvas"></canvas>
+          <div class="hero__veil"></div>
+        </div>
+
+        <div class="container hero__content">
+          <div class="kicker" data-reveal>Open-source · 2023–</div>
+          <h1 class="headline headline--h1" data-reveal>CausalImages</h1>
+          <p class="lede" data-reveal>
+            A pragmatic toolkit and workflow for causal inference when your key variables live in images — from satellite
+            imagery to biomedical scans to social science measurement.
+          </p>
+          <div class="btnRow" data-reveal>
+            <a class="btn btn--primary" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">Main hub</a>
+            <a class="btn" href="https://connorjerzak.com/gci-overview/" target="_blank" rel="noreferrer"
+              >Earth observation overview</a
+            >
+            <a class="btn" href="/assets/data/jerzak-research.bib">BibTeX</a>
+          </div>
+
+          <div class="tagRow" data-reveal aria-label="Tags">
+            <span class="tag">R package</span>
+            <span class="tag">Remote sensing</span>
+            <span class="tag">Computer vision</span>
+            <span class="tag">Causal workflows</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-label="Concept">
+        <div class="container">
+          <div class="kicker" data-reveal>Concept</div>
+          <h2 class="headline headline--h2" data-reveal>When images are the data</h2>
+          <p class="lede" data-reveal>
+            Many of the most important outcomes are hard (or expensive) to measure directly — but correlate with visual
+            signals. CausalImages is built around a simple idea: make image-based measurement compatible with credible
+            causal identification, transparent assumptions, and reproducible code.
+          </p>
+
+          <div class="grid grid--3" style="margin-top: 28px" aria-label="Principles">
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">Separate measurement from causality</h3>
+              <div class="pub__meta">Treat CV models as measurement devices, then do inference carefully.</div>
+            </div>
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">Validate where it matters</h3>
+              <div class="pub__meta">Sensitivity checks, evaluation metrics, and domain-grounded diagnostics.</div>
+            </div>
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">Ship reproducible pipelines</h3>
+              <div class="pub__meta">Focus on workflows that are easy to rerun, audit, and extend.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Media">
+        <div class="container">
+          <div class="kicker" data-reveal>Workflow</div>
+          <h2 class="headline headline--h2" data-reveal>Earth observation → evidence</h2>
+          <p class="lede" data-reveal>
+            A representative pipeline: data, models, evaluation, and inference — with the goal of interpretable effect
+            heterogeneity and robust policy insight.
+          </p>
+
+          <div class="grid grid--2" style="margin-top: 28px">
+            <div class="projectCard" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img modeLight"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/04/EO_WorkflowVizV9_1-scaled.png"
+                  alt="Earth Observation workflow diagram"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="projectCard__img modeDark"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/04/EO_WorkflowVizV9_1_darkmode.png"
+                  alt="Earth Observation workflow diagram (dark mode)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">Workflow diagram</h3>
+                <div class="projectCard__meta">
+                  Linked explainer:
+                  <a href="https://connorjerzak.com/gci-overview/" target="_blank" rel="noreferrer">gci-overview</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="projectCard" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img modeLight"
+                  src="https://planetarycausalinference.org/wp-content/uploads/2024/11/Visual-Abstract-Figure-2-copy.webp"
+                  alt="Visual abstract for effect heterogeneity with image sequences"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="projectCard__img modeDark"
+                  src="https://planetarycausalinference.org/wp-content/uploads/2025/11/Visual-Abstract-Figure-2-copy_dark.webp"
+                  alt="Visual abstract for effect heterogeneity with image sequences (dark mode)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">Effect heterogeneity</h3>
+                <div class="projectCard__meta">
+                  Paper:
+                  <a href="https://arxiv.org/abs/2407.11674" target="_blank" rel="noreferrer">arXiv:2407.11674</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="btnRow" data-reveal style="margin-top: 24px">
+            <a class="btn btn--primary" href="/projects/">Back to projects</a>
+            <a class="btn" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">Continue on main hub</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="siteFooter" aria-label="Footer">
+        <div class="container footerGrid">
+          <div>
+            <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Keep exploring.</p>
+            <p class="footerNote" data-reveal>
+              For full write-ups, code links, and updates, continue on
+              <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
+            </p>
+          </div>
+          <div class="footerLinks" data-reveal aria-label="Links">
+            <a href="/projects/">Projects</a>
+            <a href="/assets/data/jerzak-research.bib">Download bibliography (BibTeX)</a>
+            <a href="/contact/">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js" defer></script>
+    <script type="module" src="/assets/js/main.js"></script>
+  </body>
+</html>
+

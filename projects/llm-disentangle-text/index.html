@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Disentangling Text with LLMs — Connor T. Jerzak</title>
+    <meta
+      name="description"
+      content="Can Large Language Models (or Humans) disentangle text? A compact, visual project page with links and figures."
+    />
+    <meta name="author" content="Connor T. Jerzak" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://cjerzak.github.io/projects/llm-disentangle-text/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Connor T. Jerzak" />
+    <meta property="og:title" content="Can LLMs (or Humans) Disentangle Text?" />
+    <meta
+      property="og:description"
+      content="A compact visual summary with links to the paper and related explainers on connorjerzak.com."
+    />
+    <meta property="og:url" content="https://cjerzak.github.io/projects/llm-disentangle-text/" />
+    <meta property="og:image" content="https://cjerzak.github.io/images/share/og.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Can LLMs (or Humans) Disentangle Text?" />
+    <meta
+      name="twitter:description"
+      content="A compact visual summary with links to the paper and related explainers on connorjerzak.com."
+    />
+    <meta name="twitter:image" content="https://cjerzak.github.io/images/share/og.png" />
+
+    <meta name="theme-color" content="#e8e8e8" />
+
+    <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+    <link rel="me" href="https://connorjerzak.com/" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+
+  <body>
+    <a class="skipLink" href="#main">Skip to content</a>
+
+    <div class="intro" data-intro>
+      <div class="container intro__inner">
+        <div class="intro__vertical" aria-hidden="true">Click to enable sound</div>
+        <div class="intro__panel" role="dialog" aria-modal="true" aria-label="Enter experience">
+          <p class="intro__title">Disentangling text</p>
+          <p class="intro__desc">Evaluating whether LLMs (or humans) can separate meaningful dimensions in text.</p>
+          <div class="intro__actions">
+            <button class="btn btn--primary" type="button" data-intro-sound>Enable sound + enter</button>
+            <button class="btn btn--ghost" type="button" data-intro-muted>Enter muted</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="siteHeader">
+      <div class="container siteHeader__inner">
+        <a class="brand" href="/projects/" aria-label="Back to projects">
+          <span class="brand__mark" aria-hidden="true">CJ</span>
+          <span class="brand__name">Projects</span>
+          <span class="brand__sub">Text · LLMs</span>
+        </a>
+
+        <div class="headerActions">
+          <button class="iconBtn" type="button" data-sound-toggle aria-label="Enable sound">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+          <button class="iconBtn" type="button" data-theme-toggle aria-label="Switch theme">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+          <button class="iconBtn" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="menuOverlay" data-menu role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="container menuOverlay__inner">
+        <nav class="menuPanel" aria-label="Primary">
+          <a class="menuPanel__link" href="/">Home</a>
+          <a class="menuPanel__link" href="/projects/">Projects</a>
+          <a class="menuPanel__link" href="/the-studio/">The Studio</a>
+          <a class="menuPanel__link" href="/contact/">Contact</a>
+          <div class="menuPanel__meta">
+            Full hub:
+            <div class="pillRow">
+              <a class="pill" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
+              <a class="pill" href="/assets/data/jerzak-research.bib">Download BibTeX</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero" aria-label="Project hero" style="min-height: 70svh">
+        <div class="hero__bg" aria-hidden="true">
+          <canvas id="garden" class="hero__canvas"></canvas>
+          <div class="hero__veil"></div>
+        </div>
+
+        <div class="container hero__content">
+          <div class="kicker" data-reveal>NLP+CSS · 2024</div>
+          <h1 class="headline headline--h1" data-reveal>Can LLMs (or humans) disentangle text?</h1>
+          <p class="lede" data-reveal>
+            A question that sounds simple, but sits at the core of using LLMs for social science measurement: can a model
+            reliably separate the latent dimensions we care about — without leaking confounds or inventing structure?
+          </p>
+          <div class="btnRow" data-reveal>
+            <a class="btn btn--primary" href="https://aclanthology.org/2024.nlpcss-1.5.pdf" target="_blank" rel="noreferrer"
+              >Read the paper (PDF)</a
+            >
+            <a class="btn" href="https://connorjerzak.com/llms-distill/" target="_blank" rel="noreferrer">Visual explainer</a>
+            <a class="btn" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">Main hub</a>
+          </div>
+
+          <div class="tagRow" data-reveal aria-label="Tags">
+            <span class="tag">Text-as-data</span>
+            <span class="tag">Evaluation</span>
+            <span class="tag">LLMs</span>
+            <span class="tag">Measurement</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-label="Summary">
+        <div class="container">
+          <div class="kicker" data-reveal>Summary</div>
+          <h2 class="headline headline--h2" data-reveal>From “helpful” to reliable</h2>
+          <p class="lede" data-reveal>
+            Models can produce fluent outputs — but measurement needs stability, calibration, and clear failure modes.
+            This work is about bridging that gap with careful tasks, baselines, and comparisons to human judgments.
+          </p>
+
+          <div class="grid grid--3" style="margin-top: 28px" aria-label="What we look for">
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">Disentanglement</h3>
+              <div class="pub__meta">Do the inferred dimensions separate, or do they collapse together?</div>
+            </div>
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">Leakage</h3>
+              <div class="pub__meta">Does the method smuggle in information it shouldn’t have?</div>
+            </div>
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">Human comparison</h3>
+              <div class="pub__meta">Where models match humans — and where they diverge.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Figures">
+        <div class="container">
+          <div class="kicker" data-reveal>Figures</div>
+          <h2 class="headline headline--h2" data-reveal>Visual snapshots</h2>
+
+          <div class="grid grid--2" style="margin-top: 28px">
+            <div class="projectCard" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img modeLight"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/12/image_set3_1_light.webp"
+                  alt="Text analysis visualization 1"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="projectCard__img modeDark"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/12/image_set3_1_dark.webp"
+                  alt="Text analysis visualization 1 (dark mode)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">Visualization 1</h3>
+                <div class="projectCard__meta">
+                  Deep dive:
+                  <a href="https://connorjerzak.com/llms-distill/" target="_blank" rel="noreferrer">llms-distill</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="projectCard" data-reveal>
+              <div class="projectCard__media">
+                <img
+                  class="projectCard__img modeLight"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/12/image_set3_4_light.webp"
+                  alt="Text analysis visualization 4"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="projectCard__img modeDark"
+                  src="https://connorjerzak.com/wp-content/uploads/2025/12/image_set3_4_dark.webp"
+                  alt="Text analysis visualization 4 (dark mode)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="projectCard__body">
+                <h3 class="projectCard__title">Visualization 2</h3>
+                <div class="projectCard__meta">
+                  Related:
+                  <a href="https://connorjerzak.com/linkorgs-summary/" target="_blank" rel="noreferrer">linkorgs-summary</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="btnRow" data-reveal style="margin-top: 24px">
+            <a class="btn btn--primary" href="/projects/">Back to projects</a>
+            <a class="btn" href="/assets/data/jerzak-research.bib">BibTeX</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="siteFooter" aria-label="Footer">
+        <div class="container footerGrid">
+          <div>
+            <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Next steps.</p>
+            <p class="footerNote" data-reveal>
+              More context, figures, and related posts live on
+              <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
+            </p>
+          </div>
+          <div class="footerLinks" data-reveal aria-label="Links">
+            <a href="/projects/">Projects</a>
+            <a href="https://aclanthology.org/2024.nlpcss-1.5.pdf" target="_blank" rel="noreferrer">Paper (PDF)</a>
+            <a href="https://connorjerzak.com/llms-distill/" target="_blank" rel="noreferrer">Explainer</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js" defer></script>
+    <script type="module" src="/assets/js/main.js"></script>
+  </body>
+</html>
+
