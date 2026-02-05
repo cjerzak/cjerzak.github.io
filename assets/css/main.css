@@ -23,7 +23,7 @@
   --container: 1200px;
   --gutter: clamp(16px, 4vw, 56px);
 
-  --serif: ui-serif, "Times New Roman", Times, serif;
+  --serif: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
   --sans: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
 
   --h1: clamp(2.35rem, 5.4vw, 4.8rem);
