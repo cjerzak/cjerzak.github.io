@@ -6,8 +6,6 @@ const STORAGE = {
   intro: "cj-intro-dismissed",
 };
 
-const EASE = "cubic-bezier(0.445, 0.05, 0.55, 0.95)";
-
 function isInternalLink(anchor) {
   if (!(anchor instanceof HTMLAnchorElement)) return false;
   if (anchor.target && anchor.target !== "_self") return false;
@@ -51,6 +49,8 @@ function getSystemTheme() {
 function applyTheme(theme) {
   const safe = theme === "dark" ? "dark" : "light";
   document.documentElement.dataset.theme = safe;
+  const meta = document.querySelector('meta[name="theme-color"]:not([media])');
+  if (meta) meta.setAttribute("content", safe === "dark" ? "#030303" : "#e8e8e8");
   return safe;
 }
 
@@ -154,6 +154,8 @@ function setupIntro(audio) {
   const btnSound = intro.querySelector("[data-intro-sound]");
   const btnMuted = intro.querySelector("[data-intro-muted]");
   const soundToggleBtn = document.querySelector("[data-sound-toggle]");
+
+  if (btnSound) btnSound.focus();
 
   const hide = () => {
     intro.classList.add("is-hidden");
@@ -436,5 +438,3 @@ if (document.readyState === "loading") {
   mount();
 }
 
-// Minimal global fade helper for CSS parity (kept for reference)
-document.documentElement.style.setProperty("--fade-ease", EASE);

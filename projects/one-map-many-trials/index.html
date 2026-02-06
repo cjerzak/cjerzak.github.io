@@ -22,6 +22,8 @@
     />
     <meta property="og:url" content="https://cjerzak.github.io/projects/one-map-many-trials/" />
     <meta property="og:image" content="https://cjerzak.github.io/images/share/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="One Map, Many Trials" />
@@ -32,6 +34,7 @@
     <meta name="twitter:image" content="https://cjerzak.github.io/images/share/og.png" />
 
     <meta name="theme-color" content="#e8e8e8" />
+    <meta name="theme-color" content="#030303" media="(prefers-color-scheme: dark)" />
 
     <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="32x32" />
@@ -40,24 +43,11 @@
 
     <link rel="me" href="https://connorjerzak.com/" />
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript><style>body{opacity:1!important}</style></noscript>
   </head>
 
   <body>
     <a class="skipLink" href="#main">Skip to content</a>
-
-    <div class="intro" data-intro>
-      <div class="container intro__inner">
-        <div class="intro__vertical" aria-hidden="true">Click to enable sound</div>
-        <div class="intro__panel" role="dialog" aria-modal="true" aria-label="Enter experience">
-          <p class="intro__title">One Map, Many Trials</p>
-          <p class="intro__desc">Debiasing satellite-driven poverty analysis for causal inference.</p>
-          <div class="intro__actions">
-            <button class="btn btn--primary" type="button" data-intro-sound>Enable sound + enter</button>
-            <button class="btn btn--ghost" type="button" data-intro-muted>Enter muted</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <header class="siteHeader">
       <div class="container siteHeader__inner">
@@ -126,7 +116,7 @@
             Main site:
             <div class="pillRow">
               <a class="pill" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
-              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">Download BibTeX</a>
+              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt" target="_blank" rel="noreferrer">Download BibTeX</a>
             </div>
           </div>
         </nav>
@@ -143,6 +133,7 @@
         <div class="container hero__content">
           <div class="kicker" data-reveal>AAAI-26 · 2026</div>
           <h1 class="headline headline--h1" data-reveal>One Map, Many Trials</h1>
+          <p class="pub__meta" data-reveal style="margin-top:6px">Pettersson, Jerzak &amp; Daoud</p>
           <p class="lede" data-reveal>
             Satellite-driven poverty mapping is powerful — and biased. This work focuses on debiasing model predictions
             for causal inference when additional ground truth labels are scarce.
@@ -153,7 +144,7 @@
             <a class="btn" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">BibTeX</a>
           </div>
 
-          <div class="tagRow" data-reveal aria-label="Tags">
+          <div class="tagRow" data-reveal role="region" aria-label="Tags">
             <span class="tag">Remote sensing</span>
             <span class="tag">Debiasing</span>
             <span class="tag">Causal inference</span>
@@ -165,14 +156,14 @@
       <section class="section section--tight" aria-label="Idea">
         <div class="container">
           <div class="kicker" data-reveal>The idea</div>
-          <h2 class="headline headline--h2" data-reveal>Turn prediction into evidence</h2>
+          <h2 class="headline headline--h2" data-reveal>Debiasing predictions for causal inference</h2>
           <p class="lede" data-reveal>
             In high-stakes settings, prediction accuracy is not enough: the goal is to estimate effects and understand
             uncertainty. “One Map, Many Trials” frames a path to use satellite-based predictors while controlling for
             bias that can distort causal conclusions.
           </p>
 
-          <div class="grid grid--3" style="margin-top: 28px" aria-label="Key questions">
+          <div class="grid grid--3 mt-section" role="region" aria-label="Key questions">
             <div class="pub" data-reveal>
               <h3 class="pub__title">Where does bias enter?</h3>
               <div class="pub__meta">Labels, sampling, measurement error, and model structure.</div>
@@ -194,7 +185,7 @@
           <div class="kicker" data-reveal>Visual</div>
           <h2 class="headline headline--h2" data-reveal>Setup at a glance</h2>
 
-          <div class="grid grid--2" style="margin-top: 28px">
+          <div class="grid grid--2 mt-section">
             <div class="projectCard" data-reveal>
               <div class="projectCard__media">
                 <img
@@ -242,23 +233,29 @@
         </div>
       </section>
 
-      <footer class="siteFooter" aria-label="Footer">
-        <div class="container footerGrid">
-          <div>
-            <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Continue outward.</p>
-            <p class="footerNote" data-reveal>
-              More projects and updates live on
-              <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
-            </p>
-          </div>
-          <div class="footerLinks" data-reveal aria-label="Links">
-            <a href="/projects/">Projects</a>
-            <a href="https://arxiv.org/abs/2508.01341" target="_blank" rel="noreferrer">Paper</a>
-            <a href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">BibTeX</a>
+    </main>
+
+    <footer class="siteFooter" aria-label="Footer">
+      <div class="container footerGrid">
+        <div>
+          <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Connor T. Jerzak</p>
+          <p class="footerNote" data-reveal>
+            Assistant Professor, Department of Government, University of Texas at Austin.
+          </p>
+          <div class="footerProfiles" data-reveal>
+            <a href="mailto:connor.jerzak@austin.utexas.edu">Email</a>
+            <a href="https://github.com/cjerzak" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=8mpaH74AAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://liberalarts.utexas.edu/government/faculty/ctj583" target="_blank" rel="noreferrer">UT Faculty</a>
           </div>
         </div>
-      </footer>
-    </main>
+        <div class="footerLinks" data-reveal role="region" aria-label="Links">
+          <a href="/projects/">Projects</a>
+          <a href="https://arxiv.org/abs/2508.01341" target="_blank" rel="noreferrer">Paper (arXiv)</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js" defer></script>
     <script type="module" src="/assets/js/main.js"></script>

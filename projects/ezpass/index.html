@@ -22,6 +22,8 @@
     />
     <meta property="og:url" content="https://cjerzak.github.io/projects/ezpass/" />
     <meta property="og:image" content="https://cjerzak.github.io/images/share/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Politics of E‑ZPass" />
@@ -32,6 +34,7 @@
     <meta name="twitter:image" content="https://cjerzak.github.io/images/share/og.png" />
 
     <meta name="theme-color" content="#e8e8e8" />
+    <meta name="theme-color" content="#030303" media="(prefers-color-scheme: dark)" />
 
     <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="32x32" />
@@ -40,24 +43,11 @@
 
     <link rel="me" href="https://connorjerzak.com/" />
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript><style>body{opacity:1!important}</style></noscript>
   </head>
 
   <body>
     <a class="skipLink" href="#main">Skip to content</a>
-
-    <div class="intro" data-intro>
-      <div class="container intro__inner">
-        <div class="intro__vertical" aria-hidden="true">Click to enable sound</div>
-        <div class="intro__panel" role="dialog" aria-modal="true" aria-label="Enter experience">
-          <p class="intro__title">Politics of E‑ZPass</p>
-          <p class="intro__desc">Transportation infrastructure, policy feedback, and electoral outcomes.</p>
-          <div class="intro__actions">
-            <button class="btn btn--primary" type="button" data-intro-sound>Enable sound + enter</button>
-            <button class="btn btn--ghost" type="button" data-intro-muted>Enter muted</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <header class="siteHeader">
       <div class="container siteHeader__inner">
@@ -126,7 +116,7 @@
             Main site:
             <div class="pillRow">
               <a class="pill" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
-              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">Download BibTeX</a>
+              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt" target="_blank" rel="noreferrer">Download BibTeX</a>
             </div>
           </div>
         </nav>
@@ -143,6 +133,7 @@
         <div class="container hero__content">
           <div class="kicker" data-reveal>Research in Transportation Economics · 2020</div>
           <h1 class="headline headline--h1" data-reveal>The impact of E‑ZPass</h1>
+          <p class="pub__meta" data-reveal style="margin-top:6px">Jerzak &amp; Libgober</p>
           <p class="lede" data-reveal>
             Evidence that a transportation intervention can reshape electoral politics — highlighting the political
             consequences of infrastructure and policy feedback.
@@ -157,7 +148,7 @@
             <a class="btn" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">Main hub</a>
           </div>
 
-          <div class="tagRow" data-reveal aria-label="Tags">
+          <div class="tagRow" data-reveal role="region" aria-label="Tags">
             <span class="tag">Infrastructure</span>
             <span class="tag">Elections</span>
             <span class="tag">Policy feedback</span>
@@ -169,13 +160,13 @@
       <section class="section section--tight" aria-label="Summary">
         <div class="container">
           <div class="kicker" data-reveal>Summary</div>
-          <h2 class="headline headline--h2" data-reveal>Policy that changes behavior — and politics</h2>
+          <h2 class="headline headline--h2" data-reveal>Infrastructure and electoral effects</h2>
           <p class="lede" data-reveal>
             E‑ZPass changed travel time and commuting patterns. This project studies downstream political effects,
             connecting infrastructure improvements to electoral outcomes.
           </p>
 
-          <div class="grid grid--3" style="margin-top: 28px" aria-label="Angles">
+          <div class="grid grid--3 mt-section" role="region" aria-label="Angles">
             <div class="pub" data-reveal>
               <h3 class="pub__title">Mechanisms</h3>
               <div class="pub__meta">Behavioral change, time savings, and engagement.</div>
@@ -197,7 +188,7 @@
           <div class="kicker" data-reveal>Figures</div>
           <h2 class="headline headline--h2" data-reveal>Visual summaries</h2>
 
-          <div class="grid grid--2" style="margin-top: 28px">
+          <div class="grid grid--2 mt-section">
             <div class="projectCard" data-reveal>
               <div class="projectCard__media">
 	                <img
@@ -218,7 +209,7 @@
 	                />
               </div>
               <div class="projectCard__body">
-                <h3 class="projectCard__title">Summary 1</h3>
+                <h3 class="projectCard__title">E-ZPass adoption and turnout</h3>
                 <div class="projectCard__meta">High-level patterns</div>
               </div>
             </div>
@@ -243,7 +234,7 @@
 	                />
               </div>
               <div class="projectCard__body">
-                <h3 class="projectCard__title">Summary 2</h3>
+                <h3 class="projectCard__title">Mechanisms and robustness</h3>
                 <div class="projectCard__meta">Mechanisms and robustness</div>
               </div>
             </div>
@@ -268,7 +259,7 @@
 	                />
               </div>
               <div class="projectCard__body">
-                <h3 class="projectCard__title">Summary 3</h3>
+                <h3 class="projectCard__title">Placebo and sensitivity checks</h3>
                 <div class="projectCard__meta">Additional checks</div>
               </div>
             </div>
@@ -292,23 +283,29 @@
         </div>
       </section>
 
-      <footer class="siteFooter" aria-label="Footer">
-        <div class="container footerGrid">
-          <div>
-            <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Explore more.</p>
-            <p class="footerNote" data-reveal>
-              More work, posts, and updates live on
-              <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
-            </p>
-          </div>
-          <div class="footerLinks" data-reveal aria-label="Links">
-            <a href="/projects/">Projects</a>
-            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0739885919303361" target="_blank" rel="noreferrer">Paper</a>
-            <a href="https://connorjerzak.com/wp-content/uploads/2022/12/PoliticalEffects_EZPass.pdf" target="_blank" rel="noreferrer">PDF</a>
+    </main>
+
+    <footer class="siteFooter" aria-label="Footer">
+      <div class="container footerGrid">
+        <div>
+          <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Connor T. Jerzak</p>
+          <p class="footerNote" data-reveal>
+            Assistant Professor, Department of Government, University of Texas at Austin.
+          </p>
+          <div class="footerProfiles" data-reveal>
+            <a href="mailto:connor.jerzak@austin.utexas.edu">Email</a>
+            <a href="https://github.com/cjerzak" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=8mpaH74AAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://liberalarts.utexas.edu/government/faculty/ctj583" target="_blank" rel="noreferrer">UT Faculty</a>
           </div>
         </div>
-      </footer>
-    </main>
+        <div class="footerLinks" data-reveal role="region" aria-label="Links">
+          <a href="/projects/">Projects</a>
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0739885919303361" target="_blank" rel="noreferrer">Paper</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js" defer></script>
     <script type="module" src="/assets/js/main.js"></script>

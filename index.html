@@ -22,6 +22,8 @@
     />
     <meta property="og:url" content="https://cjerzak.github.io/" />
     <meta property="og:image" content="https://cjerzak.github.io/images/share/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Connor T. Jerzak — Research" />
@@ -32,7 +34,9 @@
     <meta name="twitter:image" content="https://cjerzak.github.io/images/share/og.png" />
 
     <meta name="theme-color" content="#e8e8e8" />
+    <meta name="theme-color" content="#030303" media="(prefers-color-scheme: dark)" />
     <meta name="format-detection" content="telephone=no" />
+    <noscript><style>body{opacity:1!important}</style></noscript>
 
     <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="32x32" />
@@ -41,7 +45,7 @@
 
     <link rel="me" href="https://connorjerzak.com/" />
 
-    <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+    <link rel="preconnect" href="https://www.youtube.com" />
     <link rel="preconnect" href="https://i.ytimg.com" />
 
     <link rel="stylesheet" href="/assets/css/main.css" />
@@ -68,7 +72,7 @@
     <div class="intro" data-intro>
       <div class="container intro__inner">
         <div class="intro__vertical" aria-hidden="true">Click to enable sound</div>
-        <div class="intro__panel" role="dialog" aria-modal="true" aria-label="Enter experience">
+        <div class="intro__panel" role="dialog" aria-label="Enter experience">
           <p class="intro__title">Welcome.</p>
           <p class="intro__desc">
             Projects, publications, and tools in causal inference, AI, and Earth observation.
@@ -141,7 +145,7 @@
     <div class="menuOverlay" data-menu role="dialog" aria-modal="true" aria-label="Site menu">
       <div class="container menuOverlay__inner">
         <nav class="menuPanel" aria-label="Primary">
-          <a class="menuPanel__link" href="/">Home</a>
+          <a class="menuPanel__link" href="/" aria-current="page">Home</a>
           <a class="menuPanel__link" href="/projects/">Projects</a>
           <a class="menuPanel__link" href="/the-studio/">The Studio</a>
           <a class="menuPanel__link" href="/contact/">Contact</a>
@@ -150,7 +154,7 @@
             More at:
             <div class="pillRow">
               <a class="pill" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
-              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">Download BibTeX</a>
+              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt" target="_blank" rel="noreferrer">Download BibTeX</a>
             </div>
           </div>
         </nav>
@@ -166,24 +170,25 @@
 
         <div class="container hero__content">
           <div class="hero__meta kicker" data-reveal>
-            <span>Research overview</span>
+            <span>Connor T. Jerzak</span>
             <span class="hero__metaDot" aria-hidden="true"></span>
-            <span>Causal inference · AI · Earth observation</span>
+            <span>Assistant Professor, UT Austin</span>
           </div>
           <h1 class="headline headline--h1" data-reveal>
-            Measure the world.<br />
-            Infer causes.<br />
-            Build tools that last.
+            Causal inference,<br />
+            computation,<br />
+            and global development.
           </h1>
           <p class="lede" data-reveal>
-            Causal inference, machine learning, and Earth observation — turning complex data into evidence and open tools.
+            I develop statistical methods and software for causal inference using satellite imagery,
+            text, and large-scale administrative data. Department of Government, University of Texas at Austin.
           </p>
           <div class="btnRow" data-reveal>
             <a class="btn btn--primary" href="/projects/">Explore projects</a>
-            <a class="btn" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">Visit connorjerzak.com</a>
+            <a class="btn" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
           </div>
 
-          <div class="tagRow" data-reveal aria-label="Topics">
+          <div class="tagRow" data-reveal role="region" aria-label="Topics">
             <span class="tag">Causal ML</span>
             <span class="tag">Remote sensing</span>
             <span class="tag">Text-as-data</span>
@@ -198,13 +203,13 @@
       <section class="section section--tight" aria-label="Research visuals">
         <div class="container">
           <div class="kicker" data-reveal>Visualization backbone</div>
-          <h2 class="headline headline--h2" data-reveal>Figures that clarify.</h2>
+          <h2 class="headline headline--h2" data-reveal>Research visuals</h2>
           <p class="lede" data-reveal>
             A selection of recent visuals. Each tile links to a paper, project, or explainer (often on
             <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>).
           </p>
 
-          <div class="mosaic" aria-label="Gallery">
+          <div class="mosaic" role="region" aria-label="Gallery">
             <div class="mosaic__item" data-reveal>
               <figure class="mosaicCard">
                 <div class="liteEmbed" data-lite-yt="CW7HPNMVxTg" data-start="4" aria-label="Text-based AI systems video">
@@ -435,14 +440,14 @@
 
       <section class="section" aria-label="Approach">
         <div class="container">
-          <div class="kicker" data-reveal>Our approach</div>
-          <h2 class="headline headline--h2" data-reveal>Methods you can audit.</h2>
+          <div class="kicker" data-reveal>Approach</div>
+          <h2 class="headline headline--h2" data-reveal>Methods you can audit</h2>
           <p class="lede" data-reveal>
             Combining causal inference, machine learning, and domain knowledge to produce interpretable estimates with
             uncertainty, backed by open tools and reproducible workflows.
           </p>
 
-          <div class="grid grid--3" style="margin-top: 28px" aria-label="Approach pillars">
+          <div class="grid grid--3 mt-section" role="region" aria-label="Approach pillars">
             <div class="pub" data-reveal>
               <h3 class="pub__title">Causal design</h3>
               <div class="pub__meta">Experimental design, rerandomization, robust inference.</div>
@@ -462,10 +467,10 @@
       <section class="section section--tight" aria-label="Featured projects">
         <div class="container">
           <div class="kicker" data-reveal>Featured</div>
-          <h2 class="headline headline--h2" data-reveal>Projects worth a click.</h2>
+          <h2 class="headline headline--h2" data-reveal>Selected projects</h2>
           <p class="lede" data-reveal>Selected work across causal ML, remote sensing, text-as-data, and experimental design.</p>
 
-          <div class="grid grid--2" style="margin-top: 28px">
+          <div class="grid grid--2 mt-section">
             <a class="projectCard" href="/projects/fastrerandomize/" data-reveal>
               <div class="projectCard__media">
 	                <img
@@ -578,25 +583,31 @@
         </div>
       </section>
 
-      <footer class="siteFooter" aria-label="Footer">
-        <div class="container footerGrid">
-          <div>
-            <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Keep going.</p>
-            <p class="footerNote" data-reveal>
-              For the full archive of work, posts, and updates, visit
-              <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
-            </p>
-          </div>
+    </main>
 
-          <div class="footerLinks" data-reveal aria-label="Links">
-            <a href="/projects/">Projects</a>
-            <a href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">Download bibliography (BibTeX)</a>
-            <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">Main site: connorjerzak.com</a>
-            <a href="/contact/">Contact</a>
+    <footer class="siteFooter" aria-label="Footer">
+      <div class="container footerGrid">
+        <div>
+          <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Connor T. Jerzak</p>
+          <p class="footerNote" data-reveal>
+            Assistant Professor, Department of Government, University of Texas at Austin.
+          </p>
+          <div class="footerProfiles" data-reveal>
+            <a href="mailto:connor.jerzak@austin.utexas.edu">Email</a>
+            <a href="https://github.com/cjerzak" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=8mpaH74AAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://liberalarts.utexas.edu/government/faculty/ctj583" target="_blank" rel="noreferrer">UT Faculty</a>
           </div>
         </div>
-      </footer>
-    </main>
+
+        <div class="footerLinks" data-reveal role="region" aria-label="Links">
+          <a href="/projects/">Projects</a>
+          <a href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt" target="_blank" rel="noreferrer">Download bibliography (BibTeX)</a>
+          <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js" defer></script>
     <script type="module" src="/assets/js/main.js"></script>

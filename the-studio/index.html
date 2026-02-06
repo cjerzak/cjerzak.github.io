@@ -22,6 +22,8 @@
     />
     <meta property="og:url" content="https://cjerzak.github.io/the-studio/" />
     <meta property="og:image" content="https://cjerzak.github.io/images/share/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="The Studio — Connor T. Jerzak" />
@@ -32,6 +34,7 @@
     <meta name="twitter:image" content="https://cjerzak.github.io/images/share/og.png" />
 
     <meta name="theme-color" content="#e8e8e8" />
+    <meta name="theme-color" content="#030303" media="(prefers-color-scheme: dark)" />
 
     <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="32x32" />
@@ -40,24 +43,11 @@
 
     <link rel="me" href="https://connorjerzak.com/" />
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript><style>body{opacity:1!important}</style></noscript>
   </head>
 
   <body>
     <a class="skipLink" href="#main">Skip to content</a>
-
-    <div class="intro" data-intro>
-      <div class="container intro__inner">
-        <div class="intro__vertical" aria-hidden="true">Click to enable sound</div>
-        <div class="intro__panel" role="dialog" aria-modal="true" aria-label="Enter experience">
-          <p class="intro__title">The Studio</p>
-          <p class="intro__desc">Approach, principles, and next steps.</p>
-          <div class="intro__actions">
-            <button class="btn btn--primary" type="button" data-intro-sound>Enable sound + enter</button>
-            <button class="btn btn--ghost" type="button" data-intro-muted>Enter muted</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <header class="siteHeader">
       <div class="container siteHeader__inner">
@@ -120,13 +110,13 @@
         <nav class="menuPanel" aria-label="Primary">
           <a class="menuPanel__link" href="/">Home</a>
           <a class="menuPanel__link" href="/projects/">Projects</a>
-          <a class="menuPanel__link" href="/the-studio/">The Studio</a>
+          <a class="menuPanel__link" href="/the-studio/" aria-current="page">The Studio</a>
           <a class="menuPanel__link" href="/contact/">Contact</a>
           <div class="menuPanel__meta">
             Main site:
             <div class="pillRow">
               <a class="pill" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
-              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">Download BibTeX</a>
+              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt" target="_blank" rel="noreferrer">Download BibTeX</a>
             </div>
           </div>
         </nav>
@@ -163,7 +153,7 @@
             project.
           </p>
 
-          <div class="grid grid--3" style="margin-top: 28px" aria-label="Principle cards">
+          <div class="grid grid--3 mt-section" role="region" aria-label="Principle cards">
             <div class="pub" data-reveal>
               <h3 class="pub__title">Rigorous methods</h3>
               <div class="pub__meta">Experimental design, causal identification, and robust inference.</div>
@@ -194,7 +184,7 @@
             <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
           </p>
 
-          <div class="grid grid--2" style="margin-top: 28px" aria-label="Next links">
+          <div class="grid grid--2 mt-section" role="region" aria-label="Next links">
             <div class="pub" data-reveal>
               <h3 class="pub__title">Projects index</h3>
               <div class="pub__meta">Browse projects, figures, and links to the original papers.</div>
@@ -215,24 +205,30 @@
         </div>
       </section>
 
-      <footer class="siteFooter" aria-label="Footer">
-        <div class="container footerGrid">
-          <div>
-            <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>See the full hub.</p>
-            <p class="footerNote" data-reveal>
-              Main site:
-              <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
-            </p>
-          </div>
-          <div class="footerLinks" data-reveal aria-label="Links">
-            <a href="/">Home</a>
-            <a href="/projects/">Projects</a>
-            <a href="/the-studio/services/">Services</a>
-            <a href="/contact/">Contact</a>
+    </main>
+
+    <footer class="siteFooter" aria-label="Footer">
+      <div class="container footerGrid">
+        <div>
+          <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Connor T. Jerzak</p>
+          <p class="footerNote" data-reveal>
+            Assistant Professor, Department of Government, University of Texas at Austin.
+          </p>
+          <div class="footerProfiles" data-reveal>
+            <a href="mailto:connor.jerzak@austin.utexas.edu">Email</a>
+            <a href="https://github.com/cjerzak" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=8mpaH74AAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://liberalarts.utexas.edu/government/faculty/ctj583" target="_blank" rel="noreferrer">UT Faculty</a>
           </div>
         </div>
-      </footer>
-    </main>
+        <div class="footerLinks" data-reveal role="region" aria-label="Links">
+          <a href="/">Home</a>
+          <a href="/projects/">Projects</a>
+          <a href="/the-studio/services/">Services</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js" defer></script>
     <script type="module" src="/assets/js/main.js"></script>

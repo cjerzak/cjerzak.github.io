@@ -8,9 +8,9 @@
     <meta name="description" content="Behind-the-scenes technical notes for cjerzak.github.io." />
     <meta name="author" content="Connor T. Jerzak" />
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="canonical" href="https://cjerzak.github.io/backstage/" />
 
     <meta name="theme-color" content="#e8e8e8" />
+    <meta name="theme-color" content="#030303" media="(prefers-color-scheme: dark)" />
 
     <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="32x32" />
@@ -18,6 +18,7 @@
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
 
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript><style>body{opacity:1!important}</style></noscript>
   </head>
 
   <body>
@@ -90,7 +91,7 @@
             Main site:
             <div class="pillRow">
               <a class="pill" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
-              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">Download BibTeX</a>
+              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt" target="_blank" rel="noreferrer">Download BibTeX</a>
             </div>
           </div>
         </nav>
@@ -125,7 +126,7 @@
             Zero-build static site with smooth page fades, an ambient sound bed, and a generative canvas backdrop.
           </p>
 
-          <div class="grid grid--2" style="margin-top: 28px" aria-label="Backstage cards">
+          <div class="grid grid--2 mt-section" role="region" aria-label="Backstage cards">
             <div class="pub" data-reveal>
               <h3 class="pub__title">Intro loader</h3>
               <div class="pub__meta">
@@ -159,22 +160,23 @@
         </div>
       </section>
 
-      <footer class="siteFooter" aria-label="Footer">
-        <div class="container footerGrid">
-          <div>
-            <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Back to the surface.</p>
-            <p class="footerNote" data-reveal>
-              Press <kbd>b</kbd> then <kbd>g</kbd> on any page to return here.
-            </p>
-          </div>
-          <div class="footerLinks" data-reveal aria-label="Links">
-            <a href="/">Home</a>
-            <a href="/projects/">Projects</a>
-            <a href="/the-studio/">The Studio</a>
-          </div>
-        </div>
-      </footer>
     </main>
+
+    <footer class="siteFooter" aria-label="Footer">
+      <div class="container footerGrid">
+        <div>
+          <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Connor T. Jerzak</p>
+          <p class="footerNote" data-reveal>
+            Press <kbd>b</kbd> then <kbd>g</kbd> on any page to return here.
+          </p>
+        </div>
+        <div class="footerLinks" data-reveal role="region" aria-label="Links">
+          <a href="/">Home</a>
+          <a href="/projects/">Projects</a>
+          <a href="/the-studio/">The Studio</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js" defer></script>
     <script type="module" src="/assets/js/main.js"></script>

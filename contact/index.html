@@ -22,6 +22,8 @@
     />
     <meta property="og:url" content="https://cjerzak.github.io/contact/" />
     <meta property="og:image" content="https://cjerzak.github.io/images/share/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Contact — Connor T. Jerzak" />
@@ -32,6 +34,7 @@
     <meta name="twitter:image" content="https://cjerzak.github.io/images/share/og.png" />
 
     <meta name="theme-color" content="#e8e8e8" />
+    <meta name="theme-color" content="#030303" media="(prefers-color-scheme: dark)" />
 
     <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="32x32" />
@@ -40,24 +43,11 @@
 
     <link rel="me" href="https://connorjerzak.com/" />
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript><style>body{opacity:1!important}</style></noscript>
   </head>
 
   <body>
     <a class="skipLink" href="#main">Skip to content</a>
-
-    <div class="intro" data-intro>
-      <div class="container intro__inner">
-        <div class="intro__vertical" aria-hidden="true">Click to enable sound</div>
-        <div class="intro__panel" role="dialog" aria-modal="true" aria-label="Enter experience">
-          <p class="intro__title">Contact</p>
-          <p class="intro__desc">For collaboration, talks, or questions: reach out via the main hub.</p>
-          <div class="intro__actions">
-            <button class="btn btn--primary" type="button" data-intro-sound>Enable sound + enter</button>
-            <button class="btn btn--ghost" type="button" data-intro-muted>Enter muted</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <header class="siteHeader">
       <div class="container siteHeader__inner">
@@ -121,12 +111,12 @@
           <a class="menuPanel__link" href="/">Home</a>
           <a class="menuPanel__link" href="/projects/">Projects</a>
           <a class="menuPanel__link" href="/the-studio/">The Studio</a>
-          <a class="menuPanel__link" href="/contact/">Contact</a>
+          <a class="menuPanel__link" href="/contact/" aria-current="page">Contact</a>
           <div class="menuPanel__meta">
             Main site:
             <div class="pillRow">
               <a class="pill" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
-              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">Download BibTeX</a>
+              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt" target="_blank" rel="noreferrer">Download BibTeX</a>
             </div>
           </div>
         </nav>
@@ -141,72 +131,82 @@
         </div>
 
         <div class="container hero__content">
-          <div class="kicker" data-reveal>Let’s talk</div>
-          <h1 class="headline headline--h1" data-reveal>Collaboration, talks, questions.</h1>
+          <div class="kicker" data-reveal>Contact</div>
+          <h1 class="headline headline--h1" data-reveal>Get in touch</h1>
           <p class="lede" data-reveal>
-            The best way to reach out is through the contact page on the main hub — where details and current links are
-            kept up to date.
+            For collaboration, talks, or questions about research and software.
           </p>
           <div class="btnRow" data-reveal>
-            <a class="btn btn--primary" href="https://connorjerzak.com/contact/" target="_blank" rel="noreferrer"
-              >Contact via connorjerzak.com</a
-            >
-            <a class="btn" href="/projects/">Explore projects</a>
-          </div>
-
-          <div class="tagRow" data-reveal aria-label="Topics">
-            <span class="tag">Causal inference</span>
-            <span class="tag">Remote sensing</span>
-            <span class="tag">LLMs & measurement</span>
-            <span class="tag">Data linkage</span>
+            <a class="btn btn--primary" href="mailto:connor.jerzak@austin.utexas.edu">Email</a>
+            <a class="btn" href="https://connorjerzak.com/contact/" target="_blank" rel="noreferrer">connorjerzak.com/contact</a>
           </div>
         </div>
       </section>
 
-      <section class="section section--tight" aria-label="Quick links">
+      <section class="section section--tight" aria-label="Contact details">
         <div class="container">
-          <div class="kicker" data-reveal>Quick links</div>
-          <h2 class="headline headline--h2" data-reveal>Start here</h2>
+          <div class="kicker" data-reveal>Profiles</div>
+          <h2 class="headline headline--h2" data-reveal>Find me online</h2>
 
-          <div class="grid grid--2" style="margin-top: 28px" aria-label="Contact links">
+          <div class="grid grid--2 mt-section" role="region" aria-label="Contact links">
             <div class="pub" data-reveal>
-              <h3 class="pub__title">Main hub</h3>
-              <div class="pub__meta">Full archive of projects, posts, and updated links.</div>
+              <h3 class="pub__title">Email</h3>
+              <div class="pub__meta">connor.jerzak@austin.utexas.edu</div>
               <div class="pub__links">
-                <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
-                <a href="https://connorjerzak.com/contact/" target="_blank" rel="noreferrer">Contact page</a>
+                <a href="mailto:connor.jerzak@austin.utexas.edu">Send email</a>
               </div>
             </div>
 
             <div class="pub" data-reveal>
-              <h3 class="pub__title">Bibliography</h3>
-              <div class="pub__meta">Download the BibTeX used to generate the publications list.</div>
+              <h3 class="pub__title">UT Austin faculty page</h3>
+              <div class="pub__meta">Department of Government</div>
               <div class="pub__links">
-                <a href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">Download BibTeX</a>
-                <a href="/projects/#bibliography">View selected publications</a>
+                <a href="https://liberalarts.utexas.edu/government/faculty/ctj583" target="_blank" rel="noreferrer">Faculty page</a>
+              </div>
+            </div>
+
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">GitHub</h3>
+              <div class="pub__meta">Open-source packages and replication code.</div>
+              <div class="pub__links">
+                <a href="https://github.com/cjerzak" target="_blank" rel="noreferrer">github.com/cjerzak</a>
+              </div>
+            </div>
+
+            <div class="pub" data-reveal>
+              <h3 class="pub__title">Google Scholar</h3>
+              <div class="pub__meta">Full publication list with citations.</div>
+              <div class="pub__links">
+                <a href="https://scholar.google.com/citations?user=8mpaH74AAAAJ" target="_blank" rel="noreferrer">Scholar profile</a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <footer class="siteFooter" aria-label="Footer">
-        <div class="container footerGrid">
-          <div>
-            <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>See you there.</p>
-            <p class="footerNote" data-reveal>
-              For current info and direct contact, use
-              <a href="https://connorjerzak.com/contact/" target="_blank" rel="noreferrer">connorjerzak.com/contact</a>.
-            </p>
-          </div>
-          <div class="footerLinks" data-reveal aria-label="Links">
-            <a href="/">Home</a>
-            <a href="/projects/">Projects</a>
-            <a href="/the-studio/">The Studio</a>
+    </main>
+
+    <footer class="siteFooter" aria-label="Footer">
+      <div class="container footerGrid">
+        <div>
+          <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Connor T. Jerzak</p>
+          <p class="footerNote" data-reveal>
+            Assistant Professor, Department of Government, University of Texas at Austin.
+          </p>
+          <div class="footerProfiles" data-reveal>
+            <a href="mailto:connor.jerzak@austin.utexas.edu">Email</a>
+            <a href="https://github.com/cjerzak" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=8mpaH74AAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://liberalarts.utexas.edu/government/faculty/ctj583" target="_blank" rel="noreferrer">UT Faculty</a>
           </div>
         </div>
-      </footer>
-    </main>
+        <div class="footerLinks" data-reveal role="region" aria-label="Links">
+          <a href="/">Home</a>
+          <a href="/projects/">Projects</a>
+          <a href="/the-studio/">The Studio</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js" defer></script>
     <script type="module" src="/assets/js/main.js"></script>

@@ -22,6 +22,8 @@
     />
     <meta property="og:url" content="https://cjerzak.github.io/projects/fastrerandomize/" />
     <meta property="og:image" content="https://cjerzak.github.io/images/share/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="FastRerandomize" />
@@ -32,6 +34,7 @@
     <meta name="twitter:image" content="https://cjerzak.github.io/images/share/og.png" />
 
     <meta name="theme-color" content="#e8e8e8" />
+    <meta name="theme-color" content="#030303" media="(prefers-color-scheme: dark)" />
 
     <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="32x32" />
@@ -40,24 +43,11 @@
 
     <link rel="me" href="https://connorjerzak.com/" />
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript><style>body{opacity:1!important}</style></noscript>
   </head>
 
   <body>
     <a class="skipLink" href="#main">Skip to content</a>
-
-    <div class="intro" data-intro>
-      <div class="container intro__inner">
-        <div class="intro__vertical" aria-hidden="true">Click to enable sound</div>
-        <div class="intro__panel" role="dialog" aria-modal="true" aria-label="Enter experience">
-          <p class="intro__title">FastRerandomize</p>
-          <p class="intro__desc">Accelerated rerandomization for experimental design and randomization tests.</p>
-          <div class="intro__actions">
-            <button class="btn btn--primary" type="button" data-intro-sound>Enable sound + enter</button>
-            <button class="btn btn--ghost" type="button" data-intro-muted>Enter muted</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <header class="siteHeader">
       <div class="container siteHeader__inner">
@@ -126,7 +116,7 @@
             Main site:
             <div class="pillRow">
               <a class="pill" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
-              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">Download BibTeX</a>
+              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt" target="_blank" rel="noreferrer">Download BibTeX</a>
             </div>
           </div>
         </nav>
@@ -143,6 +133,7 @@
         <div class="container hero__content">
           <div class="kicker" data-reveal>SoftwareX · 2026</div>
           <h1 class="headline headline--h1" data-reveal>FastRerandomize</h1>
+          <p class="pub__meta" data-reveal style="margin-top:6px">Goldstein, Jerzak, Kamat &amp; Zhu</p>
           <p class="lede" data-reveal>
             Fast rerandomization using accelerated computing — enabling stronger experimental designs and exact
             inference at practical speeds.
@@ -155,9 +146,11 @@
               >ScienceDirect</a
             >
             <a class="btn" href="https://arxiv.org/abs/2501.07642" target="_blank" rel="noreferrer">arXiv</a>
+            <a class="btn" href="https://github.com/cjerzak/fastrerandomize" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn" href="https://cran.r-project.org/package=fastrerandomize" target="_blank" rel="noreferrer">CRAN</a>
           </div>
 
-          <div class="tagRow" data-reveal aria-label="Tags">
+          <div class="tagRow" data-reveal role="region" aria-label="Tags">
             <span class="tag">Rerandomization</span>
             <span class="tag">GPU acceleration</span>
             <span class="tag">Randomization tests</span>
@@ -169,14 +162,14 @@
       <section class="section section--tight" aria-label="Overview">
         <div class="container">
           <div class="kicker" data-reveal>Overview</div>
-          <h2 class="headline headline--h2" data-reveal>Why it matters</h2>
+          <h2 class="headline headline--h2" data-reveal>Overview</h2>
           <p class="lede" data-reveal>
             Rerandomization improves covariate balance by repeatedly drawing random assignments and accepting only those
             that pass a balance criterion. The challenge is speed: naïve rerandomization can be too slow for large
             experiments. FastRerandomize brings accelerated computing to the bottlenecks.
           </p>
 
-          <div class="grid grid--3" style="margin-top: 28px" aria-label="Highlights">
+          <div class="grid grid--3 mt-section" role="region" aria-label="Highlights">
             <div class="pub" data-reveal>
               <h3 class="pub__title">Faster acceptance</h3>
               <div class="pub__meta">Scale rerandomization to larger N without losing rigor.</div>
@@ -201,7 +194,7 @@
             Light/dark variants are shown automatically based on the site theme.
           </p>
 
-          <div class="grid grid--2" style="margin-top: 28px">
+          <div class="grid grid--2 mt-section">
             <div class="projectCard" data-reveal>
               <div class="projectCard__media">
 	                <img
@@ -260,23 +253,29 @@
         </div>
       </section>
 
-      <footer class="siteFooter" aria-label="Footer">
-        <div class="container footerGrid">
-          <div>
-            <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>More on the hub.</p>
-            <p class="footerNote" data-reveal>
-              Continue exploring on
-              <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
-            </p>
-          </div>
-          <div class="footerLinks" data-reveal aria-label="Links">
-            <a href="/projects/">Projects</a>
-            <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">Main hub</a>
-            <a href="/contact/">Contact</a>
+    </main>
+
+    <footer class="siteFooter" aria-label="Footer">
+      <div class="container footerGrid">
+        <div>
+          <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Connor T. Jerzak</p>
+          <p class="footerNote" data-reveal>
+            Assistant Professor, Department of Government, University of Texas at Austin.
+          </p>
+          <div class="footerProfiles" data-reveal>
+            <a href="mailto:connor.jerzak@austin.utexas.edu">Email</a>
+            <a href="https://github.com/cjerzak" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=8mpaH74AAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://liberalarts.utexas.edu/government/faculty/ctj583" target="_blank" rel="noreferrer">UT Faculty</a>
           </div>
         </div>
-      </footer>
-    </main>
+        <div class="footerLinks" data-reveal role="region" aria-label="Links">
+          <a href="/projects/">Projects</a>
+          <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js" defer></script>
     <script type="module" src="/assets/js/main.js"></script>

@@ -122,9 +122,14 @@ export function initGardenCanvas(canvas, { theme = "light" } = {}) {
     }
   }
 
+  const FRAME_INTERVAL = 1000 / 30;
+  let lastFrameTime = 0;
+
   function frame(now) {
-    draw(now);
     rafId = requestAnimationFrame(frame);
+    if (now - lastFrameTime < FRAME_INTERVAL) return;
+    lastFrameTime = now;
+    draw(now);
   }
 
   function onPointerMove(e) {

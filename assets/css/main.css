@@ -23,7 +23,7 @@
   --container: 1200px;
   --gutter: clamp(16px, 4vw, 56px);
 
-  --serif: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --display: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
   --sans: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
 
   --h1: clamp(2.35rem, 5.4vw, 4.8rem);
@@ -37,7 +37,7 @@
 html[data-theme="dark"] {
   --bg: #030303;
   --bg-veil: rgba(3, 3, 3, 0.72);
-  --panel: rgba(3, 3, 3, 0.42);
+  --panel: rgba(255, 255, 255, 0.06);
   --text: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.72);
   --line: rgba(255, 255, 255, 0.16);
@@ -102,7 +102,7 @@ a:hover {
 }
 
 html[data-theme="dark"] ::selection {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.30);
 }
 
 :focus-visible {
@@ -147,7 +147,7 @@ html[data-theme="dark"] ::selection {
 }
 
 .headline {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-weight: 400;
   line-height: 0.96;
   margin: 0;
@@ -161,6 +161,12 @@ html[data-theme="dark"] ::selection {
 .headline--h2 {
   font-size: var(--h2);
   letter-spacing: -0.02em;
+}
+
+@media (max-width: 600px) {
+  .headline {
+    line-height: 1.1;
+  }
 }
 
 .lede {
@@ -290,12 +296,12 @@ html[data-theme="dark"] .modeDark {
   color: var(--bg);
   display: grid;
   place-items: center;
-  font-family: var(--serif);
+  font-family: var(--display);
   letter-spacing: -0.03em;
 }
 
 .brand__name {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 1.15rem;
   letter-spacing: -0.01em;
 }
@@ -496,13 +502,24 @@ html[data-theme="dark"] .iconBtn[data-theme-toggle] .iconBtn__moon {
 }
 
 .menuPanel__link {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(2rem, 5vw, 3.75rem);
   letter-spacing: -0.02em;
   line-height: 1;
   text-decoration: none;
   position: relative;
   width: fit-content;
+}
+
+.menuPanel__link[aria-current="page"] {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}
+
+.menuPanel__link:not([aria-current="page"]) {
+  opacity: 0.65;
 }
 
 .menuPanel__link::after {
@@ -599,7 +616,7 @@ html[data-theme="dark"] .iconBtn[data-theme-toggle] .iconBtn__moon {
 }
 
 .intro__title {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(1.55rem, 2.6vw, 2.25rem);
   line-height: 1.05;
   margin: 0;
@@ -743,8 +760,12 @@ html[data-theme="dark"] .hero__veil {
 
 .projectCard:hover {
   transform: translateY(-2px);
-  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.35);
   text-decoration: none;
+}
+
+html[data-theme="dark"] .projectCard:hover {
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.65);
 }
 
 .projectCard__media {
@@ -764,7 +785,7 @@ html[data-theme="dark"] .hero__veil {
 }
 
 .projectCard__title {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: var(--h3);
   line-height: 1.1;
   margin: 0;
@@ -816,6 +837,10 @@ html[data-theme="dark"] .hero__veil {
 .mosaicCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 24px 55px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="dark"] .mosaicCard:hover {
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.65);
 }
 
 .mosaicCard__link {
@@ -924,7 +949,7 @@ html[data-theme="dark"] .hero__veil {
 }
 
 .pub__title {
-  font-family: var(--serif);
+  font-family: var(--display);
   margin: 0;
   line-height: 1.15;
 }
@@ -950,7 +975,7 @@ html[data-theme="dark"] .hero__veil {
 details.pub summary {
   cursor: pointer;
   list-style: none;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: var(--h3);
   line-height: 1.1;
 }
@@ -1008,6 +1033,56 @@ details.pub[open] summary {
 
 .footerLinks a {
   text-decoration: underline;
+}
+
+/* =========================
+   Utility
+   ========================= */
+
+.mt-section {
+  margin-top: 28px;
+}
+
+/* =========================
+   kbd styling
+   ========================= */
+
+kbd {
+  display: inline-block;
+  padding: 2px 7px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  font-family: var(--sans);
+  font-size: 0.85em;
+  line-height: 1.4;
+}
+
+/* =========================
+   Footer profile links
+   ========================= */
+
+.footerProfiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.footerProfiles a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.footerProfiles a:hover {
+  background: var(--panel);
+  text-decoration: none;
 }
 
 /* =========================

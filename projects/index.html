@@ -22,6 +22,8 @@
     />
     <meta property="og:url" content="https://cjerzak.github.io/projects/" />
     <meta property="og:image" content="https://cjerzak.github.io/images/share/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Projects & Publications — Connor T. Jerzak" />
@@ -32,6 +34,7 @@
     <meta name="twitter:image" content="https://cjerzak.github.io/images/share/og.png" />
 
     <meta name="theme-color" content="#e8e8e8" />
+    <meta name="theme-color" content="#030303" media="(prefers-color-scheme: dark)" />
     <meta name="format-detection" content="telephone=no" />
 
     <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" />
@@ -41,28 +44,14 @@
 
     <link rel="me" href="https://connorjerzak.com/" />
 
+    <link rel="preconnect" href="https://www.youtube.com" />
+    <link rel="preconnect" href="https://i.ytimg.com" />
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript><style>body{opacity:1!important}</style></noscript>
   </head>
 
   <body>
     <a class="skipLink" href="#main">Skip to content</a>
-
-    <div class="intro" data-intro>
-      <div class="container intro__inner">
-        <div class="intro__vertical" aria-hidden="true">Click to enable sound</div>
-        <div class="intro__panel" role="dialog" aria-modal="true" aria-label="Enter experience">
-          <p class="intro__title">Projects & publications.</p>
-          <p class="intro__desc">
-            Projects, publications, and open-source tools.
-          </p>
-          <div class="intro__actions">
-            <button class="btn btn--primary" type="button" data-intro-sound>Enable sound + enter</button>
-            <button class="btn btn--ghost" type="button" data-intro-muted>Enter muted</button>
-          </div>
-          <div class="intro__hint">Tip: Press <kbd>b</kbd> then <kbd>g</kbd> for backstage.</div>
-        </div>
-      </div>
-    </div>
 
     <header class="siteHeader">
       <div class="container siteHeader__inner">
@@ -124,14 +113,14 @@
       <div class="container menuOverlay__inner">
         <nav class="menuPanel" aria-label="Primary">
           <a class="menuPanel__link" href="/">Home</a>
-          <a class="menuPanel__link" href="/projects/">Projects</a>
+          <a class="menuPanel__link" href="/projects/" aria-current="page">Projects</a>
           <a class="menuPanel__link" href="/the-studio/">The Studio</a>
           <a class="menuPanel__link" href="/contact/">Contact</a>
           <div class="menuPanel__meta">
             Main site:
             <div class="pillRow">
               <a class="pill" href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>
-              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">Download BibTeX</a>
+              <a class="pill" href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt" target="_blank" rel="noreferrer">Download BibTeX</a>
             </div>
           </div>
         </nav>
@@ -147,7 +136,7 @@
 
         <div class="container hero__content">
           <div class="kicker" data-reveal>Projects & publications</div>
-          <h1 class="headline headline--h1" data-reveal>Choose a thread.<br />Follow it outward.</h1>
+          <h1 class="headline headline--h1" data-reveal>Projects and publications</h1>
           <p class="lede" data-reveal>
             Select a project to see key results, figures, and links to the original papers.
           </p>
@@ -163,7 +152,7 @@
           <div class="kicker" data-reveal>Index</div>
           <h2 class="headline headline--h2" data-reveal>Featured projects</h2>
 
-          <div class="grid grid--2" style="margin-top: 28px">
+          <div class="grid grid--2 mt-section">
             <a class="projectCard" href="/projects/fastrerandomize/" data-reveal>
               <div class="projectCard__media">
 	                <img
@@ -331,7 +320,7 @@
             A broader selection of figures, results, and talks.
           </p>
 
-          <div class="mosaic" aria-label="Full gallery">
+          <div class="mosaic" role="region" aria-label="Full gallery">
             <div class="mosaic__item" data-reveal>
               <figure class="mosaicCard">
                 <a href="https://planetarycausalinference.org/" target="_blank" rel="noreferrer" class="mosaicCard__link">
@@ -473,7 +462,7 @@
             <a href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">JerzakConnorBib</a>.
           </p>
 
-          <ol class="pubList" style="margin-top: 28px">
+          <ul class="pubList mt-section">
             <li class="pub" data-reveal>
               <h3 class="pub__title">FastRerandomize: Fast rerandomization using accelerated computing</h3>
               <div class="pub__meta">Goldstein, Jerzak, Kamat, Zhu · SoftwareX · 2026</div>
@@ -518,7 +507,7 @@
                 <a href="https://proceedings.mlr.press/v213/jerzak23a.html" target="_blank" rel="noreferrer">PMLR</a>
               </div>
             </li>
-          </ol>
+          </ul>
 
           <details class="pub" data-reveal style="margin-top: 18px">
             <summary>Full bibliography (24 items)</summary>
@@ -527,7 +516,7 @@
               <a href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">JerzakConnorBib</a>.
             </div>
 
-            <ol class="pubList" style="margin-top: 14px">
+            <ul class="pubList" style="margin-top: 14px">
               <li class="pub">
                 <h3 class="pub__title">
                   Chinese vs. World Bank Development Projects: Insights from Earth Observation and Computer Vision on Wealth Gains in Africa, 2002–2013
@@ -708,29 +697,35 @@
                 <h3 class="pub__title">Ultras in Egypt: State, Revolution, and the Power of Public Space</h3>
                 <div class="pub__meta">Jerzak · Interface · 2013</div>
               </li>
-            </ol>
+            </ul>
           </details>
         </div>
       </section>
 
-      <footer class="siteFooter" aria-label="Footer">
-        <div class="container footerGrid">
-          <div>
-            <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Back to the hub.</p>
-            <p class="footerNote" data-reveal>
-              For the full archive, updates, and posts:
-              <a href="https://connorjerzak.com/" target="_blank" rel="noreferrer">connorjerzak.com</a>.
-            </p>
-          </div>
-          <div class="footerLinks" data-reveal aria-label="Links">
-            <a href="/">Home</a>
-            <a href="/the-studio/">The Studio</a>
-            <a href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt">Download bibliography (BibTeX)</a>
-            <a href="/contact/">Contact</a>
+    </main>
+
+    <footer class="siteFooter" aria-label="Footer">
+      <div class="container footerGrid">
+        <div>
+          <p class="headline" style="font-size: 1.85rem; margin: 0" data-reveal>Connor T. Jerzak</p>
+          <p class="footerNote" data-reveal>
+            Assistant Professor, Department of Government, University of Texas at Austin.
+          </p>
+          <div class="footerProfiles" data-reveal>
+            <a href="mailto:connor.jerzak@austin.utexas.edu">Email</a>
+            <a href="https://github.com/cjerzak" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=8mpaH74AAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://liberalarts.utexas.edu/government/faculty/ctj583" target="_blank" rel="noreferrer">UT Faculty</a>
           </div>
         </div>
-      </footer>
-    </main>
+        <div class="footerLinks" data-reveal role="region" aria-label="Links">
+          <a href="/">Home</a>
+          <a href="/the-studio/">The Studio</a>
+          <a href="https://connorjerzak.com/wp-content/uploads/2024/07/JerzakConnorBib.txt" target="_blank" rel="noreferrer">Download bibliography (BibTeX)</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js" defer></script>
     <script type="module" src="/assets/js/main.js"></script>
