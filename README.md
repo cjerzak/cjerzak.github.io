@@ -8,7 +8,7 @@ Web connector for connorjerzak.com.
 **Key routes**
 - `/` (home)
 - `/projects/` (projects + bibliography)
-- `/the-studio/` and `/the-studio/services/`
+- `/the-lab/` and `/the-lab/services/`
 - `/contact/`
 
 **Research bibliography**
