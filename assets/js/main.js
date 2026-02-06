@@ -449,16 +449,28 @@ function setupSmoothScroll() {
   try {
     // eslint-disable-next-line no-undef
     lenis = new Lenis({
+      content: document.body,
       duration: 1.1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: "vertical",
-      gestureDirection: "vertical",
-      smooth: true,
-      smoothTouch: false,
+      orientation: "vertical",
+      gestureOrientation: "vertical",
+      smoothWheel: true,
+      syncTouch: false,
       touchMultiplier: 1.4,
     });
   } catch {
     return;
+  }
+
+  const requestResize = () => {
+    if (!lenis) return;
+    window.requestAnimationFrame(() => lenis?.resize?.());
+    window.setTimeout(() => lenis?.resize?.(), 320);
+  };
+
+  const detailsNodes = Array.from(document.querySelectorAll("details"));
+  for (const node of detailsNodes) {
+    node.addEventListener("toggle", requestResize);
   }
 
   let rafId = 0;
@@ -473,11 +485,15 @@ function setupSmoothScroll() {
     }
   };
   rafId = requestAnimationFrame(raf);
+  requestResize();
 
   window.addEventListener(
     "pagehide",
     () => {
       if (rafId) cancelAnimationFrame(rafId);
+      for (const node of detailsNodes) {
+        node.removeEventListener("toggle", requestResize);
+      }
       lenis?.destroy?.();
       lenis = null;
     },
