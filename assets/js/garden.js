@@ -75,9 +75,9 @@ export function initGardenCanvas(canvas, { theme = "light" } = {}) {
     const baseY = height * 0.86;
 
     const strokeBase =
-      theme === "dark" ? "rgba(255,255,255,0.18)" : "rgba(3,3,3,0.18)";
+      theme === "dark" ? "rgba(255,255,255,0.24)" : "rgba(3,3,3,0.18)";
     const strokeThin =
-      theme === "dark" ? "rgba(255,255,255,0.09)" : "rgba(3,3,3,0.09)";
+      theme === "dark" ? "rgba(255,255,255,0.13)" : "rgba(3,3,3,0.09)";
 
     for (const blade of blades) {
       const x = blade.x;
@@ -189,4 +189,3 @@ export function initGardenCanvas(canvas, { theme = "light" } = {}) {
     },
   };
 }
-

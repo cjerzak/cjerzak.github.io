@@ -674,10 +674,14 @@ html[data-theme="dark"] .iconBtn[data-theme-toggle] .iconBtn__moon {
 }
 
 html[data-theme="dark"] .hero__veil {
-  background: radial-gradient(1200px 600px at 15% 25%, rgba(255, 255, 255, 0.08), transparent),
-    radial-gradient(1100px 700px at 80% 65%, rgba(255, 255, 255, 0.06), transparent),
+  background: radial-gradient(1200px 600px at 15% 25%, rgba(255, 255, 255, 0.06), transparent),
+    radial-gradient(1100px 700px at 80% 65%, rgba(255, 255, 255, 0.04), transparent),
     linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--bg));
-  opacity: 1;
+  opacity: 0.84;
+}
+
+html[data-theme="dark"] .hero__canvas {
+  filter: brightness(1.07) contrast(1.12);
 }
 
 .hero__content {
