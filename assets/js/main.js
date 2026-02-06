@@ -6,6 +6,10 @@ const STORAGE = {
   intro: "cj-intro-dismissed",
 };
 
+function unlockBodyScroll() {
+  document.body.classList.remove("menu-open");
+}
+
 function isInternalLink(anchor) {
   if (!(anchor instanceof HTMLAnchorElement)) return false;
   if (anchor.target && anchor.target !== "_self") return false;
@@ -148,6 +152,7 @@ function setupIntro(audio) {
   const alreadyDismissed = getStored(STORAGE.intro) === "1";
   if (alreadyDismissed) {
     intro.classList.add("is-hidden");
+    intro.setAttribute("hidden", "hidden");
     return;
   }
 
@@ -155,15 +160,50 @@ function setupIntro(audio) {
   const btnMuted = intro.querySelector("[data-intro-muted]");
   const soundToggleBtn = document.querySelector("[data-sound-toggle]");
 
-  if (btnSound) btnSound.focus();
+  let didHide = false;
+  let failSafeTimer = 0;
+  const keyDismiss = new Set(["Escape", " ", "ArrowDown", "PageDown", "End"]);
+
+  const teardown = () => {
+    window.removeEventListener("wheel", onScrollIntent);
+    window.removeEventListener("touchmove", onScrollIntent);
+    window.removeEventListener("keydown", onKeyIntent);
+    window.clearTimeout(failSafeTimer);
+  };
 
   const hide = () => {
+    if (didHide) return;
+    didHide = true;
+    teardown();
     intro.classList.add("is-hidden");
     setStored(STORAGE.intro, "1");
     window.setTimeout(() => {
       intro.setAttribute("hidden", "hidden");
     }, 320);
   };
+
+  const onScrollIntent = () => hide();
+  const onKeyIntent = (e) => {
+    if (!keyDismiss.has(String(e.key))) return;
+    hide();
+  };
+
+  if (!btnSound || !btnMuted) {
+    hide();
+    return;
+  }
+
+  intro.removeAttribute("hidden");
+
+  if (btnSound) btnSound.focus();
+
+  // If users try to scroll immediately, dismiss intro instead of blocking the page.
+  window.addEventListener("wheel", onScrollIntent, { passive: true });
+  window.addEventListener("touchmove", onScrollIntent, { passive: true });
+  window.addEventListener("keydown", onKeyIntent);
+
+  // Fail-safe: never keep a full-screen gate forever.
+  failSafeTimer = window.setTimeout(() => hide(), 12000);
 
   btnSound?.addEventListener("click", async () => {
     await audio.setEnabled(true);
@@ -219,9 +259,13 @@ function setupMenu() {
   const close = () => {
     overlay.classList.remove("is-open");
     renderToggleLabel(false);
-    document.body.classList.remove("menu-open");
+    unlockBodyScroll();
     overlay.removeEventListener("keydown", trapTab);
-    if (lastActive && typeof lastActive.focus === "function") lastActive.focus();
+    try {
+      if (lastActive && typeof lastActive.focus === "function") lastActive.focus();
+    } catch {
+      // ignore focus restoration issues
+    }
   };
 
   const open = () => {
@@ -248,6 +292,13 @@ function setupMenu() {
     if (e.key === "Escape") close();
   });
 
+  window.addEventListener("pageshow", () => {
+    overlay.classList.remove("is-open");
+    renderToggleLabel(false);
+    overlay.removeEventListener("keydown", trapTab);
+    unlockBodyScroll();
+  });
+
   for (const link of overlay.querySelectorAll("a")) {
     link.addEventListener("click", () => close());
   }
@@ -268,9 +319,20 @@ function setupPageTransitions() {
     if (url.pathname === window.location.pathname && url.hash) return;
 
     e.preventDefault();
+    unlockBodyScroll();
     document.body.classList.add("is-leaving");
+
     window.setTimeout(() => {
-      window.location.assign(a.href);
+      document.body.classList.remove("is-leaving");
+      unlockBodyScroll();
+    }, 1800);
+
+    window.setTimeout(() => {
+      try {
+        window.location.assign(a.href);
+      } catch {
+        window.location.href = a.href;
+      }
     }, 310);
   });
 }
@@ -324,6 +386,13 @@ function setupReveal() {
   const els = Array.from(document.querySelectorAll("[data-reveal]"));
   if (!els.length) return;
 
+  document.documentElement.classList.add("js");
+
+  if (!("IntersectionObserver" in window)) {
+    for (const el of els) el.classList.add("is-revealed");
+    return;
+  }
+
   const io = new IntersectionObserver(
     (entries) => {
       for (const entry of entries) {
@@ -372,25 +441,48 @@ function setupLiteEmbeds() {
 
 function setupSmoothScroll() {
   if (prefersReducedMotion()) return;
+  if (window.matchMedia("(pointer: coarse)").matches) return;
   const Lenis = window.Lenis;
   if (!Lenis) return;
 
-  // eslint-disable-next-line no-undef
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    direction: "vertical",
-    gestureDirection: "vertical",
-    smooth: true,
-    smoothTouch: false,
-    touchMultiplier: 2,
-  });
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+  let lenis = null;
+  try {
+    // eslint-disable-next-line no-undef
+    lenis = new Lenis({
+      duration: 1.1,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: "vertical",
+      gestureDirection: "vertical",
+      smooth: true,
+      smoothTouch: false,
+      touchMultiplier: 1.4,
+    });
+  } catch {
+    return;
   }
-  requestAnimationFrame(raf);
+
+  let rafId = 0;
+  const raf = (time) => {
+    try {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    } catch {
+      if (rafId) cancelAnimationFrame(rafId);
+      lenis?.destroy?.();
+      lenis = null;
+    }
+  };
+  rafId = requestAnimationFrame(raf);
+
+  window.addEventListener(
+    "pagehide",
+    () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      lenis?.destroy?.();
+      lenis = null;
+    },
+    { once: true }
+  );
 }
 
 function setupBackstageEasterEgg() {
@@ -411,7 +503,7 @@ function setupBackstageEasterEgg() {
 function mount() {
   // Initial paint + transitions
   document.body.classList.add("is-ready");
-  document.documentElement.classList.add("js");
+  unlockBodyScroll();
 
   // WebGL-ish hero canvas
   const canvas = document.querySelector("#garden");
@@ -437,4 +529,3 @@ if (document.readyState === "loading") {
 } else {
   mount();
 }
-

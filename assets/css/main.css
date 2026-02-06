@@ -649,7 +649,7 @@ html[data-theme="dark"] .iconBtn[data-theme-toggle] .iconBtn__moon {
   position: relative;
   min-height: 100svh;
   padding-top: 92px;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .hero__bg {
@@ -1093,13 +1093,13 @@ kbd {
    Reveals (progressive)
    ========================= */
 
-[data-reveal] {
+.js [data-reveal] {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
 }
 
-[data-reveal].is-revealed {
+.js [data-reveal].is-revealed {
   opacity: 1;
   transform: translateY(0);
 }
