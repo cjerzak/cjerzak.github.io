@@ -275,7 +275,7 @@ html[data-theme="dark"] .modeDark {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
+  padding-block: 14px;
   gap: 14px;
 }
 
@@ -596,7 +596,7 @@ html[data-theme="dark"] .iconBtn[data-theme-toggle] .iconBtn__moon {
   grid-template-columns: auto 1fr;
   gap: clamp(16px, 4vw, 42px);
   align-items: center;
-  padding: 24px 0;
+  padding-block: 24px;
 }
 
 .intro__vertical {
