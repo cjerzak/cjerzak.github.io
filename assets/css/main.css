@@ -22,7 +22,7 @@
 
   --container: 1200px;
   --gutter: clamp(16px, 4vw, 56px);
-  --gutter-start: calc(var(--gutter) + 8px);
+  --gutter-start: calc(var(--gutter) + 20px);
 
   --display: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
   --sans: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
