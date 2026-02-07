@@ -689,7 +689,8 @@ html[data-theme="dark"] .hero__canvas {
 .hero__content {
   position: relative;
   z-index: 1;
-  padding: clamp(46px, 10vw, 96px) 0 clamp(46px, 8vw, 84px);
+  padding-block-start: clamp(46px, 10vw, 96px);
+  padding-block-end: clamp(46px, 8vw, 84px);
 }
 
 .hero__meta {
