@@ -22,6 +22,7 @@
 
   --container: 1200px;
   --gutter: clamp(16px, 4vw, 56px);
+  --gutter-start: calc(var(--gutter) + 8px);
 
   --display: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
   --sans: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
@@ -127,7 +128,8 @@ html[data-theme="dark"] ::selection {
 
 .container {
   width: min(var(--container), 100%);
-  padding-inline: var(--gutter);
+  padding-inline-start: var(--gutter-start);
+  padding-inline-end: var(--gutter);
   margin-inline: auto;
 }
 
@@ -708,7 +710,7 @@ html[data-theme="dark"] .hero__canvas {
 
 .hero__scrollHint {
   position: absolute;
-  left: var(--gutter);
+  left: var(--gutter-start);
   bottom: 22px;
   z-index: 1;
   display: inline-flex;
